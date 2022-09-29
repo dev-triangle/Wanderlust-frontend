@@ -3,9 +3,7 @@ import { Drawer } from "@mui/material";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import wander_logo from '../../assets/svg/wanderlust_logo.svg'
 import { Link } from "react-router-dom";
-// import home from "../../assets/home.svg";
 import "./Navbar.css";
-// import meclogo from "../../assets/meclogo.png";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -32,7 +30,7 @@ function Navbar() {
           <Link to="/ideas" className="nav_item">
             Home
           </Link>
-          <Link to="/projects" className="nav_item">
+          <Link to="/dashboard" className="nav_item">
             Dashboard
           </Link>
           <Link to="/developers" className="nav_item">
