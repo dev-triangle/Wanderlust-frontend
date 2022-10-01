@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect,useState }  from 'react'
 import baseUrl from '../../utils/Urls'
+import './CarouselComponent.css'
+import {Carousel} from 'react-bootstrap'
 
 
 
@@ -19,7 +21,24 @@ function CarouselComponent() {
 
 
   return (
-    <div>CarouselComponent</div>
+    <Carousel>
+    { carousel.map((item)=>{
+      return(
+        <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={item.place_image}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      )
+    }) }
+      
+    </Carousel>
   )
 }
 
