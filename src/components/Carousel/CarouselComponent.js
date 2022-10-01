@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect,useState }  from 'react'
 import baseUrl from '../../utils/Urls'
-import './CarouselComponent.css'
+
 import {Carousel} from 'react-bootstrap'
 
 
