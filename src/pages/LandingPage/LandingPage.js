@@ -1,13 +1,13 @@
 import React from 'react'
 import './LandingPage.css'
 import Mainlayout from '../../components/Mainlayout/Mainlayout'
-import Carousel from '../../components/Carousel/CarouselComponent'
+import CarouselComponent from '../../components/Carousel/CarouselComponent'
 import Places from './Places'
 const LandingPage = () => {
   return (
     <div>
       <Mainlayout>
-        <Carousel/>
+        <CarouselComponent/>
         <Places/>
       </Mainlayout>
     </div>
