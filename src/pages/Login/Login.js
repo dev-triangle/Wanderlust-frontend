@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
-import './SignUp.css'
+import './Login.css'
 import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import travel_gif from '../../assets/gifs/world_gif.gif'
 import Aos from 'aos'
+
 const SignUp = () => {
     useEffect(()=>{
         Aos.init({duration:1100})
     },[])
+    
   return (
     <div>
         <Mainlayout>
