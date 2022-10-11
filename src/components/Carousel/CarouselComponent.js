@@ -25,13 +25,13 @@ function CarouselComponent() {
     { carousel.map((item)=>{
       return(
         <Carousel.Item>
-        <img
+        <img 
           className="d-block w-100"
           src={item.place_image}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <h3>{item.state}</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
