@@ -57,7 +57,7 @@
     width: 170px;
     cursor: pointer;
     border-radius: 10px;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     /* transition: ease-in 0.5s; */
     font-family: 'Inter';
 }
@@ -76,6 +76,7 @@
     color: #ffffff;
     background: #094c83;
     background: linear-gradient(0deg, #DFFFF3 , #8FE3CF );
+    margin:1rem auto;
 }
 .regBtn:hover {
     background: rgb(33,184,203);
@@ -85,7 +86,7 @@
 .login_buttons{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 @media (min-device-width: 20px) and (max-device-width: 500px){
