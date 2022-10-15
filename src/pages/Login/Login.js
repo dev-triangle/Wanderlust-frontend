@@ -4,7 +4,7 @@ import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import travel_gif from '../../assets/gifs/world_gif.gif'
 import Aos from 'aos'
 
-const SignUp = () => {
+const Login = () => {
     useEffect(()=>{
         Aos.init({duration:1100})
     },[])
@@ -40,4 +40,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default Login
