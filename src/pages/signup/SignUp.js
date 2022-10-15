@@ -4,6 +4,9 @@ import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import travel_gif from '../../assets/gifs/world_gif.gif'
 import Aos from 'aos'
 import { useNavigate } from 'react-router-dom'
+import baseUrl from '../../utils/Urls'
+import axios from 'axios'
+
 
 const SignUp = () => {
     useEffect(()=>{
@@ -15,6 +18,24 @@ const SignUp = () => {
     const[email, setEmail]=useState("");
     const[username,setUsername]=useState("");
     const[password,setPassword]=useState("");
+
+    const handlesubmit= async(e)=>{
+    
+        await axios.post(`${baseUrl}/register/`,{
+            "email" : email,
+            "username":username,
+            "password":password
+        }).then((Response)=>{
+            console.log(Response)
+            if(Response.status===201){
+              
+              navigate('/login')
+            }
+      
+       
+       })
+    }
+
   return (
     <div>
         <Mainlayout>
@@ -36,7 +57,7 @@ const SignUp = () => {
                             
                         </div>
                         
-                        <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150">Register</button>
+                        <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlesubmit} >Register</button>
                     </div>
                 </div>
             </div>
