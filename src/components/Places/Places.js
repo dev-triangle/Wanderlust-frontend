@@ -3,16 +3,29 @@ import axios from 'react'
 import aos from 'aos'
 import baseUrl from '../../utils/Urls'
 import {  useEffect,useState} from 'react'
+import PlaceCards from './PlaceCards'
 
 function Places() {
-  
+
+const [places,setPlaces]=useState("")
+useEffect(()=>{
     axios.get(`${baseUrl}/places/`).then((res)=>{
-        const data=res.data;
+        setPlaces(res.data);
     })
+},[])
+    
 
 
   return (
-    <div>Places</div>
+    <div>
+    {
+        places.map((place)=>{
+            return(
+                <
+            )
+        })
+    }
+    </div>
   )
 }
 
