@@ -21,11 +21,12 @@ function CarouselComponent() {
 
 
   return (
-    <Carousel>
+    <Carousel >
     { carousel.map((item)=>{
       return(
         <Carousel.Item>
         <img 
+          style={{ height: "75vh" }}
           className="d-block w-100"
           src={item.place_image}
           alt="First slide"
