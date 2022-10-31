@@ -2,7 +2,7 @@ import React from 'react'
 import './LandingPage.css'
 import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import CarouselComponent from '../../components/Carousel/CarouselComponent'
-import PlaceCards from '../../components/PlaceCards/PlaceCards'
+import Places from '../../components/Places/Places'
 
 
 const LandingPage = () => {
@@ -10,7 +10,7 @@ const LandingPage = () => {
     <div>
       <Mainlayout>
         <CarouselComponent/>
-        <PlaceCards/>
+        <Places/>
       </Mainlayout>
     </div>
   )
