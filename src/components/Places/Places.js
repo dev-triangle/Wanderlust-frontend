@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-
+import aos from 'aos'
 import baseUrl from '../../utils/Urls'
 import {  useEffect,useState} from 'react'
 import PlaceCards from './PlaceCards'
@@ -17,7 +17,7 @@ useEffect(()=>{
 
  
   return (
-    <div className='place__container'>
+    <div className='place__container' >
     {
         places.map((place)=>{
             return(
