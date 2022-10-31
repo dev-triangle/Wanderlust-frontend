@@ -21,7 +21,7 @@ useEffect(()=>{
     {
         places.map((place)=>{
             return(
-                <
+                <PlaceCards placename={place.place_name} country={place.country} />
             )
         })
     }
