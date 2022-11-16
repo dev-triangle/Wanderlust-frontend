@@ -57,7 +57,7 @@
     width: 170px;
     cursor: pointer;
     border-radius: 10px;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
     /* transition: ease-in 0.5s; */
     font-family: 'Inter';
 }
@@ -71,10 +71,24 @@
     background: #094c83;
     background: linear-gradient(0deg, rgba(9,76,131,1) 0%, rgba(33,184,203,1) 100%);
 }
+.InBtn{
+    padding: 0.95rem;
+    color: #ffffff;
+    background: #094c83;
+    background: linear-gradient(0deg, #DFFFF3 , #8FE3CF );
+    margin:1rem auto;
+}
 .regBtn:hover {
     background: rgb(33,184,203);
     background: linear-gradient(0deg, rgba(33,184,203,1) 0%, rgba(9,76,131,1) 100%);
 }
+
+.login_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 @media (min-device-width: 20px) and (max-device-width: 500px){
     .signup__main{
         flex-direction: column-reverse;
