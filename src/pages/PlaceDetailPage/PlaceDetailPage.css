@@ -1,0 +1,23 @@
+.place__detail_main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap:2rem;
+    padding: 2rem;
+}
+.place__header_name{
+    color: #002B5B;
+    font-family: 'Roboto';
+    font-size: 3rem;
+    font-weight: 500;
+}
+.place_details{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap:2rem;
+}
+.place__detail_image{
+    width: 18rem;
+    height: 20rem;
+}

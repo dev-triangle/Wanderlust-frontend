@@ -22,7 +22,7 @@ useEffect(()=>{
     {
         places.map((place)=>{
             return(
-                <PlaceCards placename={place.place_name} country={place.country} placeimage={place.place_image} />
+                <PlaceCards key={place.id} id={place.id} placename={place.place_name} country={place.country} placeimage={place.place_image} />
             )
         })
     }

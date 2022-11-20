@@ -4,13 +4,16 @@ import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import { Button } from '@mui/material'
 import DisplayCards from './DisplayCards'
 import CustomTitle from '../../utils/CustomTitle'
-import axios from 'axios'
+import axiosInstance from '../../utils/axios'
 import baseUrl from '../../utils/Urls'
 const Dashboard = () => {
   const[curr_username,setCurr_username]=useState('')
+  const[currEmail,setCurrEmail]=useState('')
   useEffect(()=>{
-    axios.get(`${baseUrl}/current-user/`).then((response)=>{
+    axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       console.log(response)
+      setCurr_username(response.data.username)
+      setCurrEmail(response.data.email)
     },(error)=>{
       console.log(error)
     })
@@ -45,9 +48,9 @@ const Dashboard = () => {
         <div className="profile__box">
          <img src="https://avatars.githubusercontent.com/u/43471295?v=4" className='user_profile__image' alt="profile_icon" />
          <p className='full__name'>Achyuth Mohan</p>
-         <p className='user__name'>achyut</p>
-         <p className='contact__number'>1234567890</p>
-         <p className='user__email'>achyuthmohan1@gmail.com</p>
+         <p className='user__name'>{curr_username}</p>
+         <p className='contact__number'>23456789</p>
+         <p className='user__email'>{currEmail}</p>
         </div>
         </div>
         
