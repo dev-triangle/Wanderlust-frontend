@@ -1,10 +1,20 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './Dashboard.css'
 import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import { Button } from '@mui/material'
 import DisplayCards from './DisplayCards'
 import CustomTitle from '../../utils/CustomTitle'
+import axios from 'axios'
+import baseUrl from '../../utils/Urls'
 const Dashboard = () => {
+  const[curr_username,setCurr_username]=useState('')
+  useEffect(()=>{
+    axios.get(`${baseUrl}/current-user/`).then((response)=>{
+      console.log(response)
+    },(error)=>{
+      console.log(error)
+    })
+  },[])
   
   return (
     <div>
