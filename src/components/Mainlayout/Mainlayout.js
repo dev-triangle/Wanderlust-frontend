@@ -5,6 +5,7 @@ const Mainlayout = ({children}) => {
     <div>
         <Navbar/>
         {children}
+        
     </div>
   )
 }
