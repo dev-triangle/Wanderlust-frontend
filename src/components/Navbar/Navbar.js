@@ -1,4 +1,4 @@
-import { useState, React } from "react";
+import { useState, React} from "react";
 import { Drawer } from "@mui/material";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import wander_logo from '../../assets/svg/wanderlust_logo.svg'
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   const handleDrawerOpen = () => {
     setOpen(true);
   };
