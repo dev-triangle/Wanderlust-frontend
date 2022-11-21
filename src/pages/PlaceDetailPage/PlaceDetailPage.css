@@ -20,4 +20,5 @@
 .place__detail_image{
     width: 18rem;
     height: 20rem;
+    border-radius: 50px;
 }
