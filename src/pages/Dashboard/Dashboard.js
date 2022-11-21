@@ -9,6 +9,8 @@ import baseUrl from '../../utils/Urls'
 const Dashboard = () => {
   const[curr_username,setCurr_username]=useState('')
   const[currEmail,setCurrEmail]=useState('')
+  // const[currentTab,setCurrentTab]=useState('place')
+  // const[bookings,setBookings]=useState([])
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       console.log(response)
@@ -18,6 +20,9 @@ const Dashboard = () => {
       console.log(error)
     })
   },[])
+  // useEffect(()=>{
+    
+  // },[currentTab])
   
   return (
     <div>

@@ -32,8 +32,8 @@ function CarouselComponent() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>{item.state}</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>{item.place_name}</h3>
+          <p>{item.state} , {item.country}</p>
         </Carousel.Caption>
       </Carousel.Item>
       )

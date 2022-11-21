@@ -10,6 +10,13 @@ const PlaceDetailPage = () => {
   const[placeName,setPlaceName]=useState('')
   const[placeImage,setPlaceImage]=useState()
   const[placeDesc,setPlaceDesc]=useState('')
+  const[state,setState]=useState(0)
+  const nextFrame=()=>{
+    setState(state+1)
+  }
+  const prevFrame=()=>{
+    setState(state-1)
+  }
   let{id}=useParams();
   console.log(id);
   axios.get(`${baseUrl}/places/${id}/`).then((response)=>{
@@ -38,7 +45,7 @@ const PlaceDetailPage = () => {
             </div>
             <div className="place__booking">
                     <h1 className='place__header_name'>Booking</h1>
-                    <BookingComponent/>
+                    <BookingComponent state={state} nextFrame={nextFrame} prevFrame={prevFrame}/>
             </div>
         </div>
     </Mainlayout>
