@@ -22,3 +22,30 @@
     height: 20rem;
     border-radius: 50px;
 }
+.booking_srvice__header{
+    font-family: 'Roboto';
+    color: #002B5B;
+    font-size: 2.5rem;
+}
+.booking_service__image{
+    border-radius: 50%;
+   
+    height: 11rem;
+    width: 13rem;
+}
+.stays__book_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.stay__book_card{
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    border-radius: 20px;
+    background-color:#0CBABA;
+    justify-content: center;
+    flex-direction: column;
+}
