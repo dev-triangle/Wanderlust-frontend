@@ -1,10 +1,10 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, {  useContext} from 'react'
 
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
 
-    const [authenticated,setAuthenticated] = useState(false)
+    // const [authenticated,setAuthenticated] = useState(false)
 
     return <AppContext.Provider value={{
         
