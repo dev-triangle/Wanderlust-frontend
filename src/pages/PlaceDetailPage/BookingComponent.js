@@ -35,7 +35,6 @@ useEffect(()=>{
           )
          }
         </div>
-
           <button onClick={nextFrame}>Next</button>
       </div>
     )
