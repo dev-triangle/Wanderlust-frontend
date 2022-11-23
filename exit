@@ -1,0 +1,193 @@
+[33mcommit 0fd16097fef756b5a88b2008d1be2f47e07fff5f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Wed Nov 23 14:09:22 2022 +0530
+
+    erased warnings
+
+[33mcommit 6e02ed7f196b5443f8590aa63ff9b747cb5ffd0f[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Wed Nov 23 14:02:13 2022 +0530
+
+    logout function added
+
+[33mcommit b1cf527d75d3b94e72b959a198f04be5046db252[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Wed Nov 23 13:25:08 2022 +0530
+
+    context added
+
+[33mcommit 1153b74d8d53ae66db959cd572dd8921f8bf0add[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Wed Nov 23 14:36:26 2022 +0530
+
+    addded states for booking
+
+[33mcommit cfd53302dfdc8ada3629e6412d1c9f603dff7a94[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Wed Nov 23 14:32:17 2022 +0530
+
+    framer-motion added
+
+[33mcommit c6059053f2bfc7d3318e91b52a66671824ffb841[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Wed Nov 23 14:28:37 2022 +0530
+
+    dynamic stays and travels
+
+[33mcommit b933870f35d431f88a053c3722977a390dea5630[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Mon Nov 21 22:34:21 2022 +0530
+
+    added all
+
+[33mcommit f7438efcad39dcad6b205f07f82eacdcf8371660[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Mon Nov 21 20:38:06 2022 +0530
+
+    tested and finished
+
+[33mcommit bbc2209f5f4d580cf038ceae985d1ef82d103ee2[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Mon Nov 21 20:00:51 2022 +0530
+
+    place detail page done
+
+[33mcommit a1d2132df578a0cf51f8629f6801d0d44ddec3bb[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Sun Nov 20 12:36:07 2022 +0530
+
+    place dtails page
+
+[33mcommit 3a14e4b532c404161b93d94c36a75a77fe7f6272[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Sun Nov 20 11:07:55 2022 +0530
+
+    test commit
+
+[33mcommit b12f074ec770c803c51112f41e5f7450e7cc9405[m
+Merge: 5c0614a 9cce4f7
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Sun Nov 20 10:39:48 2022 +0530
+
+    Merge branch 'main' of https://github.com/dev-triangle/wanderlust-frontend
+
+[33mcommit 5c0614a8a857433812f703fba56355151e62a722[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Sun Nov 20 10:39:37 2022 +0530
+
+    pull commit
+
+[33mcommit 9cce4f7d06084e82dab235f539ab4e2197fc1e0b[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Sun Nov 20 10:00:48 2022 +0530
+
+    login route to home
+
+[33mcommit 65f93943686844d782064705b7afeaa5c82d0dec[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Wed Nov 16 23:24:49 2022 +0530
+
+    added dashboard
+
+[33mcommit a1c61d39d6ee89892a8cc1e3499f2a3920728899[m
+Merge: 10d5cf4 0ab5383
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Wed Nov 16 22:02:51 2022 +0530
+
+    Merge branch 'main' of https://github.com/dev-triangle/wanderlust-frontend
+
+[33mcommit 10d5cf4a9dfc57d57145c221b441b4f489583186[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Wed Nov 16 22:02:38 2022 +0530
+
+    test commit
+
+[33mcommit 0ab53835484b208a8696da440b93f68da07b6a58[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Mon Oct 31 21:25:49 2022 +0530
+
+    aos init
+
+[33mcommit 0e5642bd9bb043d938b69965b1f7997f981607fd[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Mon Oct 31 21:07:01 2022 +0530
+
+    aos added but not working
+
+[33mcommit 610b1a73d849bc67107082470b6850d69b2ae2c7[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Mon Oct 31 21:00:23 2022 +0530
+
+    cards added
+
+[33mcommit 44bb9e4156521abc4be0e0b3552aa835aba9696f[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Mon Oct 31 20:04:55 2022 +0530
+
+    place cards init
+
+[33mcommit 20a91851e3d74720cc0f6275c85e247c25a13849[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Mon Oct 31 20:03:08 2022 +0530
+
+    creating places1
+
+[33mcommit 8089c655f82025f2fa378460c93bf7ac3e74af09[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Mon Oct 31 19:59:47 2022 +0530
+
+    creating places
+
+[33mcommit f27a2f190ca420c3894dd5688ab2b071ba36869a[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Sat Oct 15 12:14:56 2022 +0530
+
+    auth completed
+
+[33mcommit 08f1c52421a935f26a2b30fb9f879ef7e48cc518[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Sat Oct 15 11:43:42 2022 +0530
+
+    axios instance created
+
+[33mcommit d6e71d4f8a94142ae21ae5b2ff3f99a947c7d3ca[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Sat Oct 15 11:39:34 2022 +0530
+
+    registration successfull
+
+[33mcommit c43f95865f89ed77cc4e580e06b4cb48ada46e2c[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Sat Oct 15 11:26:00 2022 +0530
+
+    auth started
+
+[33mcommit fc367d9739a1501747ace5b2a21c2321f6eada6d[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Thu Oct 13 13:27:54 2022 +0530
+
+    buttons cleared
+
+[33mcommit 91d1ddb81741a81ee5cbc275cd9743cf07ed5946[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Tue Oct 11 20:50:19 2022 +0530
+
+    add
+
+[33mcommit ba37d9fb1026cce2e9fe12814a0c0145cd3f41c0[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Tue Oct 11 20:17:43 2022 +0530
+
+    login page added
+
+[33mcommit 5a5010419054de5b3f4b1341c41b1b45ef2479ca[m
+Author: Adithya Ajith <4adhi007@gmail.com>
+Date:   Tue Oct 11 20:16:23 2022 +0530
+
+    Adding login page
+
+[33mcommit 0677e8fbacbd5c743439d396991cfc0c0af75c45[m
+Author: Achyuth Mohan <achyuthmohan1@gmail.com>
+Date:   Sat Oct 8 12:16:27 2022 +0530
+
+    added signup page
