@@ -11,6 +11,9 @@ const PlaceDetailPage = () => {
   const[placeImage,setPlaceImage]=useState()
   const[placeDesc,setPlaceDesc]=useState('')
   const[state,setState]=useState(0)
+  const[stayId,setStayId]=useState(0)
+  const[travelId,setTravelId]=useState(0)
+
   const nextFrame=()=>{
     setState(state+1)
   }
@@ -44,7 +47,7 @@ const PlaceDetailPage = () => {
             </div>
             <div className="place__booking">
                     <h1 className='place__header_name'>Booking</h1>
-                    <BookingComponent placeid={id} state={state} nextFrame={nextFrame} prevFrame={prevFrame}/>
+                    <BookingComponent stayId={stayId} setStayId={setStayId} travelId={travelId} setTravelId={setTravelId} placeid={id} state={state} nextFrame={nextFrame} prevFrame={prevFrame}/>
             </div>
         </div>
     </Mainlayout>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import baseUrl from '../../utils/Urls'
-const BookingComponent = ({placeid,state,prevFrame,nextFrame}) => {
+const BookingComponent = ({stayId, placeid,setStayId,travelId,setTravelIdplaceid,state,prevFrame,nextFrame}) => {
   const[stays,setStays]=useState([])
   const[travels,setTravels]=useState([])
 useEffect(()=>{
