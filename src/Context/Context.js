@@ -4,7 +4,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
 
-    
+    const [authenticated,setAuthenticated] = useState(false)
 
     return <AppContext.Provider value={{
         
