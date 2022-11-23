@@ -1,3 +1,4 @@
+import { AppProvider } from '../src/Context/Context'
 import './App.css';
 import LandingPage from './pages/LandingPage/LandingPage';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
@@ -9,6 +10,7 @@ import PlaceDetailPage from './pages/PlaceDetailPage/PlaceDetailPage';
 function App() {
   return (
     <div className="App">
+    <AppProvider>
       <BrowserRouter>
           <ScrollToTop />
           <Routes>
@@ -18,7 +20,8 @@ function App() {
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
           </Routes>
-        </BrowserRouter>  
+        </BrowserRouter> 
+        </AppProvider> 
     </div>
   );
 }
