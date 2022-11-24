@@ -2,7 +2,6 @@ import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import baseUrl from '../../utils/Urls'
 import axiosInstance from '../../utils/axios'
-
 const BookingComponent = ({stayId, placeid,setStayId,travelId,setTravelId,state,prevFrame,nextFrame}) => {
   const[stays,setStays]=useState([])
   const[travels,setTravels]=useState([])
@@ -80,6 +79,7 @@ useEffect(()=>{
         </div>
 
         <button onClick={prevFrame}>Prev</button>
+
         <button onClick={finalSubmit}>Book Now</button>
       </div>
     )

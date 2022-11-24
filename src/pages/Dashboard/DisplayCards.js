@@ -1,11 +1,9 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
+import Aos from 'aos'
 const DisplayCards = ({frame}) => {
- 
-  if(frame==='stays'){
-
-  }else if(frame==='places'){
-
-  }
+ useEffect(()=>{
+  Aos.init({duration:1100})
+ },[])
   return (
     <div data-aos="zoom-in" data-aos-delay="150" className="contactCard">
       <div className="contact_img">
