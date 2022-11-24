@@ -38,14 +38,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className='booked_container'>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          
+          <DisplayCards frame={frame}/>
           </div>
           <Button variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
         </div>

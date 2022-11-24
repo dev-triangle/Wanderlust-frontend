@@ -1,5 +1,11 @@
 import React from 'react'
-const DisplayCards = () => {
+const DisplayCards = ({frame}) => {
+ 
+  if(frame==='stays'){
+
+  }else if(frame==='places'){
+
+  }
   return (
     <div data-aos="zoom-in" data-aos-delay="150" className="contactCard">
       <div className="contact_img">
