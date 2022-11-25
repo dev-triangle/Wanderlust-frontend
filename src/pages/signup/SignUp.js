@@ -58,7 +58,8 @@ const SignUp = () => {
                         </div>
                         
                         <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlesubmit} >Register</button>
-                        <p>abc</p>
+
+                        <a href='/login' className='account'>already have an account ?</a>
                     </div>
                 </div>
             </div>
