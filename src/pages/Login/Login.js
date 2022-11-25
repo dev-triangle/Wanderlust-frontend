@@ -56,8 +56,8 @@ const Login = () => {
                             
                         </div>
                         <div className='login_buttons'>
-                        <button className="about_btn InBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlelogin} >SignIn</button>
-                        <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={()=>navigate('/signup')} >Register</button>
+                        {/* <button className="about_btn InBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlelogin} >SignIn</button> */}
+                        <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlelogin} >SignIn</button>
                         </div>
                     </div>
                 </div>
