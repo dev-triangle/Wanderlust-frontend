@@ -21,7 +21,7 @@ background: linear-gradient(to top, rgba(9,121,112,1) 35%, rgba(3,153,180,1) 75%
 .su_form_container{
     display: flex;
     flex-direction: column;
-    border-radius: 2rem;
+
     /* background: rgba(7, 3, 5, 0.25); */
     gap: 1rem;
     justify-content: center;
