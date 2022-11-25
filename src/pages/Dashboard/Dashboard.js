@@ -9,8 +9,7 @@ import baseUrl from '../../utils/Urls'
 const Dashboard = () => {
   const[curr_username,setCurr_username]=useState('')
   const[currEmail,setCurrEmail]=useState('')
-  // const[currentTab,setCurrentTab]=useState('place')
-  // const[bookings,setBookings]=useState([])
+  const[frame,setFrame]=useState('places')
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       console.log(response)
@@ -33,20 +32,22 @@ const Dashboard = () => {
           <div className="booked__header_container">
             <div className="booked__title">My Bookings</div>
             <div className="booked_tabs">
-              <span className="booked_places">Places</span>
-              <span className="booked_stays">Stays</span>
-              <span className="booked_travels">Travels</span>
+              {frame==='places'?<span style={{textDecoration:'underline'}} className="booked_places">Places</span>:<span onClick={()=>{setFrame('places')}} className="booked_places">Places</span>}
+              {frame==='stays'?<span style={{textDecoration:'underline'}} className="booked_places">Stays</span>:<span onClick={()=>{setFrame('stays')}} className="booked_places">Stays</span>}
+              {frame==='travels'?<span style={{textDecoration:'underline'}} className="booked_places">Travels</span>:<span onClick={()=>{setFrame('travels')}} className="booked_places">Travels</span>}
             </div>
           </div>
           <div className='booked_container'>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          <DisplayCards/>
-          
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
+          <DisplayCards frame={frame}/>
           </div>
           <Button variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
         </div>

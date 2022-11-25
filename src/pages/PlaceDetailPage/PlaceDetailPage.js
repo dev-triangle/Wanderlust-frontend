@@ -13,7 +13,7 @@ const PlaceDetailPage = () => {
   const[state,setState]=useState(0)
   const[stayId,setStayId]=useState(0)
   const[travelId,setTravelId]=useState(0)
-
+  
   const nextFrame=()=>{
     setState(state+1)
   }

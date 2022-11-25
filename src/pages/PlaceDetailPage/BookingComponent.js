@@ -1,22 +1,43 @@
 import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import baseUrl from '../../utils/Urls'
-const BookingComponent = ({stayId, placeid,setStayId,travelId,setTravelIdplaceid,state,prevFrame,nextFrame}) => {
+import axiosInstance from '../../utils/axios'
+const BookingComponent = ({stayId, placeid,setStayId,travelId,setTravelId,state,prevFrame,nextFrame}) => {
   const[stays,setStays]=useState([])
   const[travels,setTravels]=useState([])
-useEffect(()=>{
-  axios.get(`${baseUrl}/stays/`).then((response)=>{
-    console.log(response)
-    setStays(response.data)
+  const[currUserId,setCurrUserId]=useState(0)
+  useEffect(()=>{
+    axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
+      setCurrUserId(response.data.id)
+
+    },(error)=>{
+    })
+  },[])
+  const finalSubmit=()=>{
+    axiosInstance.post(`${baseUrl}/bookings/`,
+    {
+      booking_date:"2022-11-11",
+      booking_status: true,
+      user_foreign: currUserId,
+      place_foreign: placeid,
+      stay_foreign: stayId,
+      travel_foreign: travelId
+  }).then((res)=>{
+    console.log(res)
   },(error)=>{
     console.log(error)
+  })
+  }
+useEffect(()=>{
+  axios.get(`${baseUrl}/stays/`).then((response)=>{
+    setStays(response.data)
+  },(error)=>{
   })
 },[])
 useEffect(()=>{
   axios.get(`${baseUrl}/travels/`).then((response)=>{
     setTravels(response.data)
   },(error)=>{
-    console.log(error)
   })
 },[])
  
@@ -30,7 +51,8 @@ useEffect(()=>{
             (<div className="stay__book_card">
             <img className="booking_service__image" src={stay.stay_image}alt="" />
             <p className="stay__book_name">{stay.stay_name}</p>
-            <button>Click Me</button>
+            {(stay.id===stayId)?<div>Selected</div>:<button onClick={()=>{setStayId(stay.id)}}>Select</button>}
+            
           </div>):null
           )
          }
@@ -49,7 +71,7 @@ useEffect(()=>{
             (<div className="stay__book_card">
             <img className="booking_service__image" src={travel.place_image}alt="" />
             <p className="stay__book_name">{travel.vehicle_name}</p>
-            <button>Click Me</button>
+            {(travel.id===travelId)?<div>Selected</div>:<button onClick={()=>{setTravelId(travel.id)}}>Select</button>}
           </div>):null
           )
          }
@@ -57,7 +79,8 @@ useEffect(()=>{
         </div>
 
         <button onClick={prevFrame}>Prev</button>
-        <button>Book Now</button>
+
+        <button onClick={finalSubmit}>Book Now</button>
       </div>
     )
   }
