@@ -7,7 +7,7 @@ const DisplayCards = ({frame}) => {
   return (
     <div data-aos="zoom-in" data-aos-delay="150" className="contactCard">
       <div className="contact_img">
-        <img src="https://avatars.githubusercontent.com/u/43471295?v=4" alt="contactimg" />
+        <img src="https://avatars.githubusercontent.com/u/110590339?s=200&v=4" alt="contactimg" />
       </div>
       <h2>name</h2>
       <h3>dest</h3>

@@ -79,7 +79,7 @@ const PlaceDetailPage = () => {
             </div>
             <div className="place__booking">
                     <h1 className='place__header_name'>Booking</h1>
-                    <BookingComponent stayId={stayId} setStayId={setStayId} travelId={travelId} setTravelId={setTravelId} placeid={id} state={state} nextFrame={nextFrame} prevFrame={prevFrame}/>
+                    <BookingComponent placeName={placeName} placeImage={placeImage} stayId={stayId} setStayId={setStayId} travelId={travelId} setTravelId={setTravelId} placeid={id} state={state} nextFrame={nextFrame} prevFrame={prevFrame}/>
             </div>
         </div>
     </Mainlayout>
