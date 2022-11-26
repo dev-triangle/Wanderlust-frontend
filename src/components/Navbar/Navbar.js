@@ -46,8 +46,11 @@ function Navbar() {
           <Link to="/dashboard" className="nav_item">
             Dashboard
           </Link>
-          <Link to="/developers" className="nav_item">
+          <Link to="/login" className="nav_item">
            Logout
+          </Link>
+          <Link to="/reviews" className="nav_item">
+           Reviews
           </Link>
         </div>
         
@@ -104,6 +107,15 @@ function Navbar() {
                 onClick={handleDrawerClose}
               >
                 Logout
+              </Link>
+              <Link
+                to="/reviews"
+                className="nav_item_mob"
+                spy={true}
+                smooth={true}
+                onClick={handleDrawerClose}
+              >
+                Reviews
               </Link>
             </div>
           </div>

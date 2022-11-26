@@ -12,9 +12,24 @@ const PlaceDetailPage = () => {
   const[placeDesc,setPlaceDesc]=useState('')
   const[state,setState]=useState(0)
   const[stayId,setStayId]=useState(0)
+  const[trains,setTrains]=useState([])
   const[travelId,setTravelId]=useState(0)
   const[things,setThings]=useState([])
+  const[flights,setFlights]=useState([])
+  useEffect(()=>{
+    axios.get(`${baseUrl}/flights/`).then((response)=>{
+      setFlights(response.data)
+    },(error)=>{
+      
+    })
+  },[])
+  useEffect(()=>{
+    axios.get(`${baseUrl}/trains/`).then((response)=>{
+       setTrains(response.data)
+    },(error)=>{
 
+    })
+  },[])
   useEffect(()=>{
     axios.get(`${baseUrl}/things-to-do/`).then((res)=>{
       console.log(res)
@@ -64,15 +79,49 @@ const PlaceDetailPage = () => {
                     
                     </div>
                     <div className="place__header_name">Flights to {placeName}
-                    </div>
-                    <div className="place__text">
-                    {placeDesc}
+                    <ul>
+                      {flights.map((flight)=>{
+                        return(
+                          <li className='flight_details'>
+                            <p>Flight Name: {flight.flight_name}</p>
+                            <p>Flight Time: {flight.flight_time}</p>
+                            <p>Cost: {flight.cost}</p>
+                            <p>Next Date: {flight.next_date}</p>
+                          </li>
+                        )
+                      })}
+                      </ul>
                     </div>
                     <div className="place__header_name">Trains to {placeName}
+                    <ul>
+                      {trains.map((train)=>{
+                        return(
+                          <li className='flight_details'>
+                            <p>Train Name: {train.train_name}</p>
+                            <p>Train Time: {train.flight_time}</p>
+                            <p>Cost: {train.cost}</p>
+                            <p>Next Date: {train.next_date}</p>
+                          </li>
+                        )
+                      })}
+                      </ul>
                     </div>
-                    <div className="place__text">
-                    bcwbfwhfwih
+
+                    <div className="place__header_name">Hotels in {placeName}
+                    <ul>
+                      {trains.map((train)=>{
+                        return(
+                          <li className='flight_details'>
+                            <p>Train Name: {train.train_name}</p>
+                            <p>Train Time: {train.flight_time}</p>
+                            <p>Cost: {train.cost}</p>
+                            <p>Next Date: {train.next_date}</p>
+                          </li>
+                        )
+                      })}
+                      </ul>
                     </div>
+                    
                     </div>
                     
                 
