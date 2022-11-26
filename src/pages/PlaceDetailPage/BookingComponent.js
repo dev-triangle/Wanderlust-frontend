@@ -84,7 +84,7 @@ useEffect(()=>{
             <p className="stay__book_name">{travel.vehicle_name}</p>
             {(travel.id===travelId)?<div>Selected</div>:<button onClick={()=>{
             setTravelId(travel.id)
-            setTravelImage(travel.vehicle_image)
+            setTravelImage(travel.place_image)
             setTravelName(travel.vehicle_name)
             }}>Select</button>}
           </div>):null
