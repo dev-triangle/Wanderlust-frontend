@@ -9,12 +9,16 @@ import baseUrl from '../../utils/Urls'
 const Dashboard = () => {
   const[curr_username,setCurr_username]=useState('')
   const[currEmail,setCurrEmail]=useState('')
+  const[currUserid,setcurrUserid]=useState()
+  const[actualname,setActualname]=useState('')
+  const[phno,setPhno]=useState('')
   const[frame,setFrame]=useState('places')
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       console.log(response)
       setCurr_username(response.data.username)
       setCurrEmail(response.data.email)
+      setcurrUserid(response.data.id)
     },(error)=>{
       console.log(error)
     })
@@ -24,6 +28,20 @@ const Dashboard = () => {
   // useEffect(()=>{
     
   // },[currentTab])
+
+  useEffect(()=>{
+    axiosInstance.get(`${baseUrl}/user-detail/`).then((response)=>{
+      console.log(response)
+      response.data.forEach((item)=>{
+        if(item.user_foreign===currUserid)
+         { console.log("hi")
+          setActualname(item.actual_name)
+          setPhno(item.phno)
+        
+      }
+      })
+    })
+  })
   
   return (
     <div>
@@ -34,8 +52,10 @@ const Dashboard = () => {
         <div class="profile__container">
             <div class="profile__gradient">
                 <div class="profile__content">
-                    <h2>DAVID <br/> BACKHAM</h2>
-                    <p>27 years,Los Angeles,USA</p>
+                    <h2 className='profile__h2'>{actualname}</h2>
+                    <h4>{curr_username}</h4>
+                    <br/>
+                    <h6>{phno}</h6>
                     <br/>
                     <p class="profile__details">I am a digital marketing Manager.</p>
                     <div class="profile__icons">
