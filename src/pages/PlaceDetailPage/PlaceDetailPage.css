@@ -4,6 +4,7 @@
     flex-direction: column;
     gap:2rem;
     padding: 2rem;
+    justify-content: center;
 }
 .place__header_name{
     color: #002B5B;

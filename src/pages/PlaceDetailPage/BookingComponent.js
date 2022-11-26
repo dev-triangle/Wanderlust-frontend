@@ -9,7 +9,6 @@ const BookingComponent = ({stayId, placeid,setStayId,travelId,setTravelId,state,
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       setCurrUserId(response.data.id)
-
     },(error)=>{
     })
   },[])
