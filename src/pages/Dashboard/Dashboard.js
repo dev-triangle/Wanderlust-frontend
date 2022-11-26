@@ -6,7 +6,9 @@ import DisplayCards from './DisplayCards'
 import CustomTitle from '../../utils/CustomTitle'
 import axiosInstance from '../../utils/axios'
 import baseUrl from '../../utils/Urls'
+import { useNavigate } from 'react-router-dom'
 const Dashboard = () => {
+  const navigate=useNavigate()
   const[curr_username,setCurr_username]=useState('')
   const[currEmail,setCurrEmail]=useState('')
   const[currUserid,setcurrUserid]=useState()
@@ -23,7 +25,6 @@ const Dashboard = () => {
       console.log(error)
     })
   },[])
-
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/user-detail/`).then((response)=>{
       console.log(response)
@@ -32,12 +33,10 @@ const Dashboard = () => {
          { console.log("hi")
           setActualname(item.actual_name)
           setPhno(item.phno)
-        
       }
       })
     })
   })
-  
   return (
     <div>
       <CustomTitle title="Dashboard"/>
@@ -64,8 +63,6 @@ const Dashboard = () => {
             </div>
         </div>
     </div>
-
-
         <div className="booking__main">
           <div className="booked__header_container">
             <div className="booked__title">My Bookings</div>
@@ -77,17 +74,12 @@ const Dashboard = () => {
           </div>
           <div className='booked_container'>
           <DisplayCards frame={frame} currUserid={currUserid}/>
-          
           </div>
-          <Button variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
+          <Button onClick={()=>{navigate('/')}} variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
         </div>
-     
         </div>
-        
       </Mainlayout>
-
     </div>
   )
 }
-
 export default Dashboard

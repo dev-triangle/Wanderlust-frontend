@@ -15,8 +15,7 @@ const DisplayCards = ({frame,currUserid}) => {
  },[])
  if(frame==='places'){
   return( 
-    <div>
-      {bookings.map((booking)=>
+      bookings.map((booking)=>
           booking.user_foreign===parseInt(currUserid)?
             (<div data-aos="zoom-in" data-aos-delay="150" className="contactCard">
             <div className="contact_img">
@@ -26,14 +25,10 @@ const DisplayCards = ({frame,currUserid}) => {
         <h3>{booking.date_to_book}</h3>
           </div>):null
           )
-         }
-</div>
-)
-          
+)    
  }else if(frame==='stays'){
   return(
-    <div>
-    {bookings.map((booking)=>
+    bookings.map((booking)=>
         booking.user_foreign===parseInt(currUserid)?
           (<div data-aos="zoom-in" data-aos-delay="150" className="contactCard">
           <div className="contact_img">
@@ -43,15 +38,10 @@ const DisplayCards = ({frame,currUserid}) => {
       <h3>{booking.date_to_book}</h3>
         </div>):null
         )
-       }
-</div>
   )
- 
  }
-
   return (
-    <div>
-    {bookings.map((booking)=>
+    bookings.map((booking)=>
         booking.user_foreign===parseInt(currUserid)?
           (<div data-aos="zoom-in" data-aos-delay="150" className="contactCard">
           <div className="contact_img">
@@ -61,9 +51,6 @@ const DisplayCards = ({frame,currUserid}) => {
       <h3>{booking.date_to_book}</h3>
         </div>):null
         )
-       }
-</div>
   )
 }
-
 export default DisplayCards
