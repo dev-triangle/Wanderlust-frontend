@@ -46,12 +46,13 @@ function Navbar() {
           <Link to="/dashboard" className="nav_item">
             Dashboard
           </Link>
-          <Link to="/login" className="nav_item">
-           Logout
-          </Link>
           <Link to="/reviews" className="nav_item">
            Reviews
           </Link>
+          <Link to="/login" className="nav_item">
+           Logout
+          </Link>
+          
         </div>
         
       </div>
@@ -100,15 +101,6 @@ function Navbar() {
                 Dashboard
               </Link>
               <Link
-                to="/"
-                className="nav_item_mob"
-                spy={true}
-                smooth={true}
-                onClick={handleDrawerClose}
-              >
-                Logout
-              </Link>
-              <Link
                 to="/reviews"
                 className="nav_item_mob"
                 spy={true}
@@ -117,6 +109,16 @@ function Navbar() {
               >
                 Reviews
               </Link>
+              <Link
+                to="/"
+                className="nav_item_mob"
+                spy={true}
+                smooth={true}
+                onClick={handleDrawerClose}
+              >
+                Logout
+              </Link>
+              
             </div>
           </div>
           <a href="https://www.mec.ac.in/" target="_blank" rel="noreferrer" >
