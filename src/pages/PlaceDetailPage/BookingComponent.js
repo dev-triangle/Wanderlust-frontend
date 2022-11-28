@@ -2,6 +2,8 @@ import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import baseUrl from '../../utils/Urls'
 import axiosInstance from '../../utils/axios'
+import DatePicker from '../../components/DatePicker/DatePicker'
+
 const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travelId,setTravelId,state,prevFrame,nextFrame}) => {
   const[stays,setStays]=useState([])
   const[travels,setTravels]=useState([])
@@ -94,7 +96,19 @@ useEffect(()=>{
         </div>
 
         <button onClick={prevFrame}>Prev</button>
+        <button onClick={nextFrame}>Next</button>
+        <button onClick={finalSubmit}>Book Now</button>
+      </div>
+    )
+  }
 
+  else if(state===2){
+    return(
+      <div className='booked__travels_main'>
+        
+       <DatePicker/>
+        <button onClick={prevFrame}>Prev</button>
+      
         <button onClick={finalSubmit}>Book Now</button>
       </div>
     )
