@@ -57,7 +57,7 @@ const Login = () => {
                         </div>
                         <div className='login_buttons'>
                         <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlelogin} >SignIn</button>
-                        <p>Don't have an account? <span style={{cursor:'pointer',textDecorator:'unserline'}} onClick={()=>{navigate('/signup')}}>Sign Up</span></p>
+                        <p>Don't have an account? <span style={{cursor:'pointer',textDecorator:'underline'}} onClick={()=>{navigate('/signup')}}>Sign Up</span></p>
                         </div>
                     </div>
                 </div>

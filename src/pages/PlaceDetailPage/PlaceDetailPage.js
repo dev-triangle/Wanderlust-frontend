@@ -80,30 +80,30 @@ const PlaceDetailPage = () => {
                     </div>
                     <div className="place__header_name">Flights to {placeName}
                     <ul>
-                      {flights.map((flight)=>{
-                        return(
-                          <li className='flight_details'>
-                            <p>Flight Name: {flight.flight_name}</p>
-                            <p>Flight Time: {flight.flight_time}</p>
-                            <p>Cost: {flight.cost}</p>
-                            <p>Next Date: {flight.next_date}</p>
-                          </li>
-                        )
-                      })}
+                    {flights.map((flight)=>
+          flight.to_place_foreign===parseInt(id)?
+            (<li className='flight_details'>
+            <p>Flight Name: {flight.flight_name}</p>
+            <p>Flight Time: {flight.flight_time}</p>
+            <p>Cost: {flight.cost}</p>
+            <p>Next Date: {flight.next_date}</p>
+          </li>):null
+          )
+         }
                       </ul>
                     </div>
                     <div className="place__header_name">Trains to {placeName}
                     <ul>
-                      {trains.map((train)=>{
-                        return(
-                          <li className='flight_details'>
-                            <p>Train Name: {train.train_name}</p>
-                            <p>Train Time: {train.flight_time}</p>
-                            <p>Cost: {train.cost}</p>
-                            <p>Next Date: {train.next_date}</p>
-                          </li>
-                        )
-                      })}
+                    {trains.map((train)=>
+          train.to_place_foreign===parseInt(id)?
+            (<li className='flight_details'>
+            <p>Train Name: {train.train_name}</p>
+            <p>Train Time: {train.train_time}</p>
+            <p>Cost: {train.cost}</p>
+            <p>Next Date: {train.next_date}</p>
+          </li>):null
+          )
+         }
                       </ul>
                     </div>
 
