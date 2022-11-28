@@ -167,21 +167,23 @@
 .profile__icons {
     display: flex;
     flex-direction: column;
-    top: -30px;
+    /* top: -30px;
     position: absolute;
-    left: 85%;
+    left: 85%; */
 }
 
-.profile__icons i {
+.profile__icons  {
     font-size: 25px;
     margin-bottom: 20px;
     color: rgb(202, 215, 226);
     transition: 0.3s;
 }
 
-.profile__icons i:hover {
+.profile__icons :hover {
     color: white;
 }
+
+
 
 @media screen and(min-width:200px) {
     .container {

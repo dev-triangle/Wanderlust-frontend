@@ -6,6 +6,7 @@ import Aos from 'aos'
 import { useNavigate } from 'react-router-dom'
 import baseUrl from '../../utils/Urls'
 import axios from 'axios'
+//import axiosInstance from '../../utils/axios'
 
 
 const SignUp = () => {
@@ -30,6 +31,9 @@ const SignUp = () => {
             if(Response.status===201){
               
               navigate('/login')
+            //   axiosInstance.post(`${baseUrl}/user-detail/`,{
+            //     "username":username
+            //   })
             }
       
        

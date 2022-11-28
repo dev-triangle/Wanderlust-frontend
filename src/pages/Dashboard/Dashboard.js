@@ -7,6 +7,7 @@ import CustomTitle from '../../utils/CustomTitle'
 import axiosInstance from '../../utils/axios'
 import baseUrl from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
+import {HiOutlinePencil} from 'react-icons/hi'
 const Dashboard = () => {
   const navigate=useNavigate()
   const[curr_username,setCurr_username]=useState('')
@@ -49,15 +50,17 @@ const Dashboard = () => {
                     <h2 className='profile__h2'>{actualname}</h2>
                     <h4>{curr_username}</h4>
                     <h4>{currEmail}</h4>
-                    <br/>
+                  
                     <h6>{phno}</h6>
-                    <br/>
+                
                     <p class="profile__details">I am a digital marketing Manager.</p>
                     <div class="profile__icons">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        {/*<i class="fa fa-facebook-square" aria-hidden="true"></i>
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                         <i class="fa fa-instagram" aria-hidden="true"></i>
-                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+  <i class="fa fa-pinterest" aria-hidden="true"></i>*/}
+                        <HiOutlinePencil/>
+                        
                     </div>
                 </div>
             </div>
