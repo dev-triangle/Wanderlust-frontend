@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import './Dashboard.css'
 import Mainlayout from '../../components/Mainlayout/Mainlayout'
-import { Button } from '@mui/material'
 import DisplayCards from './DisplayCards'
 import CustomTitle from '../../utils/CustomTitle'
 import axiosInstance from '../../utils/axios'
@@ -78,7 +77,8 @@ const Dashboard = () => {
           <div className='booked_container'>
           <DisplayCards frame={frame} currUserid={currUserid}/>
           </div>
-          <Button onClick={()=>{navigate('/')}} variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
+          {/* <Button onClick={()=>{navigate('/')}} variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button> */}
+          <button className='newtravel' onClick={()=>{navigate('/')}} variant="text">+ New Travel</button> 
         </div>
         </div>
       </Mainlayout>

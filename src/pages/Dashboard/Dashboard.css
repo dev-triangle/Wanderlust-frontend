@@ -182,6 +182,21 @@
 .profile__icons :hover {
     color: white;
 }
+.newtravel{
+    background-color: #2B4865;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 10rem;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
 
 
 
