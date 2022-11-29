@@ -2,7 +2,7 @@ import React from 'react';
 import { AppProvider } from '../src/Context/Context'
 import './App.css';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { Dashboard,LandingPage,Login,PlaceDetailPage,SignUp} from './pages/index';
+import { Dashboard,LandingPage,Login,PlaceDetailPage,SignUp,ReviewPage} from './pages/index';
 import ScrollToTop from "./utils/ScrollToTop"
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard/>}/>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/reviews" element={<ReviewPage/>}/>
           </Routes>
         </BrowserRouter> 
         </AppProvider> 
