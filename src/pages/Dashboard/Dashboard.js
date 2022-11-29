@@ -49,7 +49,7 @@ const Dashboard = () => {
           <DisplayCards frame={frame}/>
           <DisplayCards frame={frame}/>
           </div>
-          <Button variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
+        <Button  variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button>
         </div>
         <div className="profile__box">
          <img src="https://avatars.githubusercontent.com/u/43471295?v=4" className='user_profile__image' alt="profile_icon" />
