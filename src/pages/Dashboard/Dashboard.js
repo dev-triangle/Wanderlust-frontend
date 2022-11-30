@@ -7,6 +7,7 @@ import axiosInstance from '../../utils/axios'
 import baseUrl from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
 import {HiOutlinePencil} from 'react-icons/hi'
+import {Modal,Button} from 'react-bootstrap'
 const Dashboard = () => {
   const navigate=useNavigate()
   const[curr_username,setCurr_username]=useState('')
@@ -15,6 +16,9 @@ const Dashboard = () => {
   const[actualname,setActualname]=useState('')
   const[phno,setPhno]=useState('')
   const[frame,setFrame]=useState('places')
+ const[show,setShow]=useState(false)
+ const handleClose = () => setShow(false);
+
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       console.log(response)
@@ -60,6 +64,22 @@ const Dashboard = () => {
   <i class="fa fa-pinterest" aria-hidden="true"></i>*/}
                         <HiOutlinePencil/>
                         
+                        <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+            <Modal.Title>
+                Edit profile
+            </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+             
+        </Modal.Body>
+        <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Close Button
+                </Button>
+        </Modal.Footer>
+    </Modal>
+
                     </div>
                 </div>
             </div>
