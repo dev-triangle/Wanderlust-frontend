@@ -50,7 +50,7 @@ function Navbar() {
            Reviews
           </Link>
           {
-            (localStorage.getItem('access_token'))?((<Link to="/login" className="nav_item" onClick={()=>{Logout()}}>
+            (localStorage.getItem('refresh_token'))?((<Link to="/login" className="nav_item" onClick={()=>{Logout()}}>
            Logout
           </Link>  )):(( <Link to="/login" className="nav_item">Login</Link> ))
           }
