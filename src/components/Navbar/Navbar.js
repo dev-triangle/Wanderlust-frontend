@@ -10,9 +10,9 @@ function Navbar() {
   const [open, setOpen] = useState(false)
 
    const Logout=()=>{
- 	const response = axiosInstance.post('api/token/blacklist/', {
-     refresh_token: localStorage.getItem('refresh_token'),
-   });
+ 	// const response = axiosInstance.post('api/token/blacklist/', {
+  //    refresh_token: localStorage.getItem('refresh_token'),
+  //  });
    localStorage.removeItem('access_token');
    localStorage.removeItem('refresh_token');
    axiosInstance.defaults.headers['Authorization'] = null;

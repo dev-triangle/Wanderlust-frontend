@@ -61,12 +61,7 @@ const Dashboard = () => {
                 
                     <p class="profile__details">I am a digital marketing Manager.</p>
                     <div class="profile__icons">
-                        {/*<i class="fa fa-facebook-square" aria-hidden="true"></i>
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-  <i class="fa fa-pinterest" aria-hidden="true"></i>*/}
                         <HiOutlinePencil onClick={()=>{setShow(true)}} />
-                        
                         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
             <Modal.Title>

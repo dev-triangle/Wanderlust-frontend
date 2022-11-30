@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 
-
 function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUserimg}) {
 
    
@@ -12,7 +11,6 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
     const handleSubmit=(e)=>{
         
         e.preventDefault();
-
     
 }
 
@@ -55,7 +53,7 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
     </Form.Group><br/>
     
 
-    <Button variant="success" type="submit" block>
+    <Button onClick={handleSubmit} variant="success" type="submit" block>
         Save Changes
     </Button>
 </Form>

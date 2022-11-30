@@ -2,7 +2,7 @@ import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import baseUrl from '../../utils/Urls'
 import axiosInstance from '../../utils/axios'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import BookerDialog from '../../components/BookerDialog/BookerDialog'
 const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travelId,setTravelId,state,prevFrame,nextFrame}) => {
   const[stays,setStays]=useState([])
@@ -12,7 +12,6 @@ const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travel
   const[stayImage,setStayImage]=useState()
   const[travelName,setTravelName]=useState()
   const[travelImage,setTravelImage]=useState()
-  const[date,setDate]=useState()
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
