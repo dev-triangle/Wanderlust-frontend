@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 
 
 
-function Editprofileform() {
+function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUserimg}) {
 
    
 
@@ -25,8 +25,8 @@ function Editprofileform() {
             type="text"
             placeholder="Name *"
             name="name"
-            value={name}
-           onChange = { (e) => setName(e.target.value)}
+            value={actualname}
+           onChange = { (e) => setActualname(e.target.value)}
             
         />
     </Form.Group><br/>
@@ -36,8 +36,8 @@ function Editprofileform() {
             type="file"
             placeholder="pic"
             name="name"
-            value={dob}
-           onChange = { (e) => setDob(e.target.value)}
+            value={userimg}
+           onChange = { (e) => setUserimg(e.target.value)}
             
         />
     </Form.Group><br/>
@@ -46,85 +46,14 @@ function Editprofileform() {
        <h5>Linkedin</h5>
         <Form.Control
             type="text"
-            placeholder="Linkedin"
+            placeholder="phone number"
             name="name"
-            value={linkedin}
-           onChange = { (e) => setLinkedin(e.target.value)}
+            value={phno}
+           onChange = { (e) => setPhno(e.target.value)}
         
         />
     </Form.Group><br/>
-    <Form.Group>
-       <h5>Github</h5>
-        <Form.Control
-            type="text"
-            placeholder="Github"
-            name="name"
-            value={github}
-           onChange = { (e) => setGithub(e.target.value)}
-            
-        />
-    </Form.Group><br/>
-    <Form.Group>
-       <h5>Email</h5>
-        <Form.Control
-            type="text"
-            placeholder="Name *"
-            name="name"
-            value={email}
-           onChange = { (e) => setEmail(e.target.value)}
-            
-        />
-    </Form.Group><br/>
-    <Form.Group>
-    <h5>Skills</h5>
-        <Form.Control
-            type="text"
-            placeholder="skills *"
-            name="skills"
-           value={skills}
-           onChange = { (e) => setSkills(e.target.value)}
-            
-        />
-    </Form.Group><br/>
     
-   
-   
-    <Form.Group>
-    <h5>Experience</h5>
-        <Form.Control
-            as="textarea"
-            type="text"
-            rows={3}
-            placeholder="Experience"
-            name="Experience"
-           value={experience}
-            onChange = { (e) => setExperience(e.target.value)}
-        />
-    </Form.Group><br/>
-    <Form.Group>
-    <h5>Projects</h5>
-    <Form.Control
-        as="textarea"
-        type="text"
-        rows={3}
-        placeholder="Projects"
-        name="projects"
-      
-        value={project}
-        onChange = { (e) => setProject(e.target.value)}
-    />
-</Form.Group><br/>
-<Form.Group>
-<h5>Description</h5>
-<Form.Control
-    type="text"
-    placeholder="Description"
-    name="Description"
-    value={description}
-    onChange = { (e) => setDescription(e.target.value)}
-    
-/>
-</Form.Group><br/>
 
     <Button variant="success" type="submit" block>
         Save Changes

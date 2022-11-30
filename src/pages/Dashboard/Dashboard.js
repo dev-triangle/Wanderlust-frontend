@@ -8,6 +8,8 @@ import baseUrl from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
 import {HiOutlinePencil} from 'react-icons/hi'
 import {Modal,Button} from 'react-bootstrap'
+import Editprofileform from '../../components/Editprofileform.js/Editprofileform'
+
 const Dashboard = () => {
   const navigate=useNavigate()
   const[curr_username,setCurr_username]=useState('')
@@ -15,9 +17,10 @@ const Dashboard = () => {
   const[currUserid,setcurrUserid]=useState()
   const[actualname,setActualname]=useState('')
   const[phno,setPhno]=useState('')
+  const[userimg,setUserimg]=useState()
   const[frame,setFrame]=useState('places')
  const[show,setShow]=useState(false)
- const handleClose = () => setShow(false);
+  const handleClose = () => setShow(false);
 
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
@@ -62,7 +65,7 @@ const Dashboard = () => {
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                         <i class="fa fa-instagram" aria-hidden="true"></i>
   <i class="fa fa-pinterest" aria-hidden="true"></i>*/}
-                        <HiOutlinePencil/>
+                        <HiOutlinePencil onClick={()=>{setShow(true)}} />
                         
                         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -71,7 +74,7 @@ const Dashboard = () => {
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-             
+             <Editprofileform  actualname={actualname} setActualname={setActualname}  phno={phno} setPhno={setPhno} userimg={userimg} setUserimg={setUserimg}/>
         </Modal.Body>
         <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
