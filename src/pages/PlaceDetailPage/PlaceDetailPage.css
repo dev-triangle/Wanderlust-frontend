@@ -64,3 +64,23 @@
     justify-content: center;
     flex-direction: column;
 }
+
+
+.booking_select_btn
+{
+    background-color: #2B4865;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    padding: .5rem 1rem ;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+.booking_selected_div
+{
+    background-color: white;
+    color: #2B4865 ;
+}
