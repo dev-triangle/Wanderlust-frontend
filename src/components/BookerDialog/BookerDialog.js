@@ -10,25 +10,37 @@ const BookerDialog = ({handleClose,open,finalSubmit}) => {
   return (
     <div>
         <Dialog
+        fullWidth={true}
+        maxWidth={"md"}
+        PaperProps={{
+          sx: { width: "100%", borderRadius: 5, m: 2, minHeight: "60vh" },
+        }}
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          
         </DialogTitle>
+        <div className="question_confirn__main">
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure you want to place order ?
+           <p className='book_confirm__ques'>Are you sure you want to place order ?</p> 
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>No</Button>
+          <Button
+          PaperProps={{
+            sx:{color:'#002B5B',fontFamily:'Robotto',fontSize:'2rem'}
+          }}
+           onClick={handleClose} variant="outlined">No</Button>
           <Button onClick={finalSubmit} autoFocus>
             Yes
           </Button>
         </DialogActions>
+        </div>
+        
       </Dialog>
     </div>
   )
