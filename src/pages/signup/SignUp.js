@@ -8,6 +8,7 @@ import baseUrl from '../../utils/Urls'
 import axios from 'axios'
 
 
+
 const SignUp = () => {
     useEffect(()=>{
         Aos.init({duration:1100})
@@ -25,11 +26,16 @@ const SignUp = () => {
             "email" : email,
             "username":username,
             "password":password
-        }).then((Response)=>{
-            console.log(Response)
-            if(Response.status===201){
+        }).then((response)=>{
+            console.log(response)
+            if(response.status===201){
               
               navigate('/login')
+               axios.post(`${baseUrl}/user-detail/`,{
+                 user_foreign: response.data.id
+              })
+              
+            
             }
       
        
@@ -45,7 +51,7 @@ const SignUp = () => {
                     <div className="su_form_container">
                         <p className='su__header' >Register</p>
                         <div className="data_input_su">
-                        <label htmlFor="" className='su__username'>Email: </label>
+                        <label htmlFor="" className='su__username'>Email</label>
                             <input className='input__su' placeholder='Email' type="text" onChange={(e)=>setEmail(e.target.value)} />
                        
                         <label htmlFor=""className='su__username'data-aos="zoom-in"data-aos-delay="150">Username</label>
@@ -58,6 +64,8 @@ const SignUp = () => {
                         </div>
                         
                         <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlesubmit} >Register</button>
+
+                        <a href='/login' className='account'>already have an account ?</a>
                     </div>
                 </div>
             </div>

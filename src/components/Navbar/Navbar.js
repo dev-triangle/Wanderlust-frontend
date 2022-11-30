@@ -4,9 +4,22 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import wander_logo from '../../assets/svg/wanderlust_logo.svg'
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+//import axiosInstance from "../../utils/axios";
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+
+//   const Logout=()=>{
+// 	const response = axiosInstance.post('api/token/blacklist/', {
+//     refresh_token: localStorage.getItem('refresh_token'),
+//   });
+//   localStorage.removeItem('access_token');
+//   localStorage.removeItem('refresh_token');
+//   axiosInstance.defaults.headers['Authorization'] = null;
+//   console.log("user logged out")
+      
+// };
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -33,9 +46,13 @@ function Navbar() {
           <Link to="/dashboard" className="nav_item">
             Dashboard
           </Link>
-          <Link to="/developers" className="nav_item">
+          <Link to="/reviews" className="nav_item">
+           Reviews
+          </Link>
+          <Link to="/login" className="nav_item">
            Logout
           </Link>
+          
         </div>
         
       </div>
@@ -84,6 +101,15 @@ function Navbar() {
                 Dashboard
               </Link>
               <Link
+                to="/reviews"
+                className="nav_item_mob"
+                spy={true}
+                smooth={true}
+                onClick={handleDrawerClose}
+              >
+                Reviews
+              </Link>
+              <Link
                 to="/"
                 className="nav_item_mob"
                 spy={true}
@@ -92,6 +118,7 @@ function Navbar() {
               >
                 Logout
               </Link>
+              
             </div>
           </div>
           <a href="https://www.mec.ac.in/" target="_blank" rel="noreferrer" >

@@ -8,6 +8,7 @@ import axiosInstance from '../../utils/axios'
 import { useNavigate } from 'react-router-dom'
 
 
+
 const Login = () => {
     useEffect(()=>{
         Aos.init({duration:1100})
@@ -15,6 +16,7 @@ const Login = () => {
     const navigate=useNavigate()
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
+
 
     const handlelogin= async(e)=>{
         e.preventDefault()
@@ -27,6 +29,7 @@ const Login = () => {
             localStorage.setItem('refresh_token',res.data.refresh);
             axiosInstance.defaults.headers['Authorization']= 'Bearer ' + localStorage.getItem('access_token');
             if(res.status===200)
+            
             navigate('/')
         })
 
@@ -53,8 +56,8 @@ const Login = () => {
                             
                         </div>
                         <div className='login_buttons'>
-                        <button className="about_btn InBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlelogin} >SignIn</button>
-                        <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={()=>navigate('/signup')} >Register</button>
+                        <button className="about_btn regBtn"data-aos="zoom-in"data-aos-delay="150" onClick={handlelogin} >SignIn</button>
+                        <p>Don't have an account? <span style={{cursor:'pointer',textDecorator:'underline'}} onClick={()=>{navigate('/signup')}}>Sign Up</span></p>
                         </div>
                     </div>
                 </div>
