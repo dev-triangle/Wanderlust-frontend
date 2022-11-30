@@ -76,7 +76,7 @@ useEffect(()=>{
             (<div className="stay__book_card">
             <img className="booking_service__image" src={stay.stay_image}alt="" />
             <p className="stay__book_name">{stay.stay_name}</p>
-            {(stay.id===stayId)?<div>Selected</div>:<button onClick={()=>{setStayId(stay.id)
+            {(stay.id===stayId)?<div className='booking_select_btn booking_selected_div'>Selected</div>:<button className='booking_select_btn' onClick={()=>{setStayId(stay.id)
             setStayImage(stay.stay_image)
             setStayName(stay.stay_name)
             }}>Select</button>}
