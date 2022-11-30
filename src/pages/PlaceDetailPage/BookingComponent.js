@@ -2,8 +2,8 @@ import axios from 'axios'
 import React,{useState,useEffect} from 'react'
 import baseUrl from '../../utils/Urls'
 import axiosInstance from '../../utils/axios'
-import DatePicker from '../../components/DatePicker/DatePicker'
-
+import { Navigate, useNavigate } from 'react-router-dom'
+import BookerDialog from '../../components/BookerDialog/BookerDialog'
 const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travelId,setTravelId,state,prevFrame,nextFrame}) => {
   const[stays,setStays]=useState([])
   const[travels,setTravels]=useState([])
@@ -12,6 +12,17 @@ const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travel
   const[stayImage,setStayImage]=useState()
   const[travelName,setTravelName]=useState()
   const[travelImage,setTravelImage]=useState()
+  const[date,setDate]=useState()
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const navigate=useNavigate();
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       setCurrUserId(response.data.id)
@@ -34,6 +45,10 @@ const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travel
       travel_foreign: travelId
   }).then((res)=>{
     console.log(res)
+    if(res.status===201){
+
+      navigate('/')
+    }
   },(error)=>{
     console.log(error)
   })
@@ -97,7 +112,7 @@ useEffect(()=>{
 
         <button onClick={prevFrame}>Prev</button>
         <button onClick={nextFrame}>Next</button>
-        <button onClick={finalSubmit}>Book Now</button>
+        {/* <button onClick={finalSubmit}>Book Now</button> */}
       </div>
     )
   }
@@ -106,10 +121,10 @@ useEffect(()=>{
     return(
       <div className='booked__travels_main'>
         
-       <DatePicker/>
         <button onClick={prevFrame}>Prev</button>
       
-        <button onClick={finalSubmit}>Book Now</button>
+        <button onClick={handleClickOpen}>Book Now</button>
+        <BookerDialog handleClose={handleClose} open={open} finalSubmit={finalSubmit}/>
       </div>
     )
   }
