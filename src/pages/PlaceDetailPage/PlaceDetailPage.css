@@ -38,6 +38,7 @@
     border: 2px solid #120b75;
     padding: 1rem;
     width: 10rem;
+    margin-top: 2rem;
     border-radius: 20px;
     font-size: 1rem;
 }
@@ -52,13 +53,15 @@
 .next__button{
     border: none;
     outline: none;
+
     font-size: 1.05rem;
     font-family: 'Inter';
     width: 170px;
     margin-left: 2rem;
+    margin-top: 2rem;
     cursor: pointer;
     border-radius: 10px;
-    margin: 2rem rem;
+    /* margin: 2rem rem; */
     /* transition: ease-in 0.5s; */
     font-family: 'Inter';
     padding: 0.95rem;
@@ -94,7 +97,8 @@
     padding: 2rem;
     align-items: center;
     border-radius: 20px;
-    background-color:#0CBABA;
+    color: #ffff;
+    background: linear-gradient(180deg,rgba(9,76,131,.75),#21b8cb),#efffec;
     justify-content: center;
     flex-direction: column;
 }

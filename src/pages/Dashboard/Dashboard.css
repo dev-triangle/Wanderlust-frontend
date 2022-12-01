@@ -22,23 +22,22 @@
     flex-direction: row;
     gap: 2rem;
 }
-.profile__box{
-    height: 100vh;
-    width: 70vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    border-radius: 20px;
-    background-color: #256D85;
-    color: #ffff;
-}
+
 .contact_img {
     border-radius: 15px;
     width: 100%;
 }
-
+.profile__main{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 10rem;
+    justify-content: center;
+}
+.profile__pic{
+    border-radius: 15rem;
+    width: 10rem;
+}
 .contact_img img {
     width: 100%;
     height: 150px;
@@ -53,7 +52,8 @@
     width: 10rem;
     height: 10rem;
     flex-direction: column;
-    background-color: #256D85;
+    background: rgb(16,115,149);
+background: linear-gradient(45deg, rgba(16,115,149,0.8608485630580357) 95%, rgba(26,100,159,0.8748541652989321) 100%);
     justify-content: center;
 }
 .booked_container{
@@ -67,7 +67,7 @@
 .contactCard {
     width: 250px;
     height: 320px;
-    background: #002B5B;
+    background: linear-gradient(180deg,rgba(9,76,131,.75),#21b8cb),#efffec;
     color: #ffff;
     box-shadow: 0px 14px 30px 2px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
@@ -122,66 +122,12 @@
 
 /* profile box */
 
-.profile__main {
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  /* background: linear-gradient(to right bottom, black, rgb(88, 173, 243)); */
-    /* transform: translate(-50%, -50%); */
-}
 
-.profile__container {
-    height: 29rem;
-    width: 35rem;
-    box-shadow: 0 10px 20px black;
-    background-size: cover;
-    font-family: 'Abel', sans-serif;
-    background-image: url("https://xp.io/storage/15pewlWA.jpg");
-}
 
-.profile__gradient {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background: linear-gradient(to top, rgba(28, 171, 238, 0.7), rgba(253, 252, 252, 0.21));
-    color: white;
-}
 
-.profile__content {
-    bottom: 0;
-    position: absolute;
-    margin-bottom: 20px;
-    padding: 20px;
-}
 
-.profile__h2 {
-    font-size: xx-large;
-    letter-spacing: -1px;
-}
 
-.details {
-    font-style: italic;
-    color: rgb(185, 206, 224);
-}
 
-.profile__icons {
-    display: flex;
-    flex-direction: column;
-    /* top: -30px;
-    position: absolute;
-    left: 85%; */
-}
-
-.profile__icons  {
-    font-size: 25px;
-    margin-bottom: 20px;
-    color: rgb(202, 215, 226);
-    transition: 0.3s;
-}
-
-.profile__icons :hover {
-    color: white;
-}
 .newtravel{
     background-color: #2B4865;
     color: white;

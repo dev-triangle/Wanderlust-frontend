@@ -1,0 +1,45 @@
+.loader__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  
+  }
+  .loader{
+    --color1: #094C83;
+    --color2:  #21B8CB;
+    --color3:  #91C3E8;
+    --color4:  #278A8C;
+    --color5: #05B7B1;
+    --_mask: no-repeat radial-gradient(#000 68%,#0000 71%);
+    width: 200px;
+    aspect-ratio: 1;
+    background: conic-gradient(from 36deg,
+      var(--color1)0%,var(--color1)20%,
+      var(--color2)20%,var(--color2)40%,
+      var(--color3)40%,var(--color3)60%,
+      var(--color4)60%,var(--color4)80%,
+      var(--color5)80%)
+      no-repeat;
+    /*background-size: 200% 200%;*/
+    -webkit-mask: var(--_mask),var(--_mask),var(--_mask),var(--_mask),var(--_mask);
+    -webkit-mask-size: 25% 25%;
+    animation:
+      
+      load 3s infinite ease-in-out;
+  }
+  
+  @keyframes load{
+    0%, 100%{-webkit-mask-position:50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%;}
+    20%{-webkit-mask-position:100% 38%, 82% 100%, 18% 100%, 0% 38%, 50% 0%;}
+    40%{-webkit-mask-position:82% 100%, 18% 100%, 0% 38%, 50% 0%, 100% 38%;}
+    60%{-webkit-mask-position:18% 100%, 0% 38%, 50% 0%, 100% 38%, 82% 100%;}
+    80%{-webkit-mask-position:0% 38%, 50% 0%, 100% 38%, 82% 100%, 18% 100%;}
+  }
+  @keyframes back{
+    0%, 100%{background-position: 0 0;}
+    25%{background-position: 0 100%;}
+    50%{background-position: 100% 100%;}
+    75%{background-position: 100% 0;}
+  }

@@ -6,10 +6,8 @@ import CustomTitle from '../../utils/CustomTitle'
 import axiosInstance from '../../utils/axios'
 import baseUrl from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
-import {HiOutlinePencil} from 'react-icons/hi'
-import {Modal,Button} from 'react-bootstrap'
-import Editprofileform from '../../components/Editprofileform.js/Editprofileform'
-
+import Lottie from 'react-lottie'
+import train_anim from '../../animations/88977-metro-rail.json'
 const Dashboard = () => {
   const navigate=useNavigate()
   const[curr_username,setCurr_username]=useState('')
@@ -19,9 +17,15 @@ const Dashboard = () => {
   const[phno,setPhno]=useState('')
   const[userimg,setUserimg]=useState()
   const[frame,setFrame]=useState('places')
- const[show,setShow]=useState(false)
-  const handleClose = () => setShow(false);
 
+  const parachuteEffect={
+    loop: true,
+        autoplay: true,
+        animationData: train_anim,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice"
+        }
+  };
   useEffect(()=>{
     axiosInstance.get(`${baseUrl}/current-user/`).then((response)=>{
       console.log(response)
@@ -49,40 +53,20 @@ const Dashboard = () => {
       <CustomTitle title="Dashboard"/>
       <Mainlayout>
         <div className="dash__main_container">
-        <div class="profile__main">
-        <div class="profile__container">
-            <div class="profile__gradient">
-                <div class="profile__content">
-                    <h2 className='profile__h2'>{actualname}</h2>
-                    <h4>{curr_username}</h4>
-                    <h4>{currEmail}</h4>
-                  
-                    <h6>{phno}</h6>
-                
-                    <p class="profile__details">I am a digital marketing Manager.</p>
-                    <div class="profile__icons">
-                        <HiOutlinePencil onClick={()=>{setShow(true)}} />
-                        <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-            <Modal.Title>
-                Edit profile
-            </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-             <Editprofileform  actualname={actualname} setActualname={setActualname}  phno={phno} setPhno={setPhno} userimg={userimg} setUserimg={setUserimg}/>
-        </Modal.Body>
-        <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close Button
-                </Button>
-        </Modal.Footer>
-    </Modal>
-
-                    </div>
-                </div>
-            </div>
+          
+          {/* profile main starts here */}
+        <div className="profile__main">
+        
+        <img className='profile__pic' src="https://avatars.githubusercontent.com/u/43471295?v=4" alt="your_image" />
+        <div className="profile__details">
+          <p className='profile_name'>Name: </p>
+          <p>Phno: {actualname}</p>
+          <p>username: {curr_username}</p>
+          <p>Email: {currEmail}</p>
         </div>
-    </div>
+        <Lottie options={parachuteEffect} style={{width:'20%' ,height:'30%'}}/>
+        </div>
+        {/* profile main ends here */}
         <div className="booking__main">
           <div className="booked__header_container">
             <div className="booked__title">My Bookings</div>
@@ -95,7 +79,7 @@ const Dashboard = () => {
           <div className='booked_container'>
           <DisplayCards frame={frame} currUserid={currUserid}/>
           </div>
-          {/* <Button onClick={()=>{navigate('/')}} variant="contained" sx={{ width: 200, backgroundColor:"#2B4865" }}>New Travel</Button> */}
+        
           <button className='newtravel' onClick={()=>{navigate('/')}} variant="text">+ New Travel</button> 
         </div>
         </div>
