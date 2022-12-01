@@ -84,7 +84,7 @@ useEffect(()=>{
           )
          }
         </div>
-          <button onClick={nextFrame}>Next</button>
+          <button onClick={nextFrame} className='next__button'>Next</button>
       </div>
     )
   }
@@ -98,19 +98,21 @@ useEffect(()=>{
             (<div className="stay__book_card">
             <img className="booking_service__image" src={travel.place_image}alt="" />
             <p className="stay__book_name">{travel.vehicle_name}</p>
-            {(travel.id===travelId)?<div>Selected</div>:<button onClick={()=>{
+            {(travel.id===travelId)?<div className='booking_select_btn booking_selected_div'>Selected</div>:<button onClick={()=>{
             setTravelId(travel.id)
             setTravelImage(travel.place_image)
             setTravelName(travel.vehicle_name)
-            }}>Select</button>}
+            }} className='booking_select_btn'>Select</button>}
           </div>):null
           )
          }
 
         </div>
-
-        <button onClick={prevFrame}>Prev</button>
-        <button onClick={nextFrame}>Next</button>
+         <div className="buttons_container">
+         <button onClick={prevFrame} className='prev__button'>Prev</button>
+        <button onClick={nextFrame} className='next__button'>Next</button>
+         </div>
+        
         {/* <button onClick={finalSubmit}>Book Now</button> */}
       </div>
     )
@@ -120,9 +122,9 @@ useEffect(()=>{
     return(
       <div className='booked__travels_main'>
         
-        <button onClick={prevFrame}>Prev</button>
+        <button onClick={prevFrame} className='prev__button'>Prev</button>
       
-        <button onClick={handleClickOpen}>Book Now</button>
+        <button onClick={handleClickOpen} className='next__button'>Book Now</button>
         <BookerDialog handleClose={handleClose} open={open} finalSubmit={finalSubmit}/>
       </div>
     )

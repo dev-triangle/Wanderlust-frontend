@@ -1,0 +1,12 @@
+.main_dialog_content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+.button_continer_dialog{
+    /* gap: 2rem; */
+}
