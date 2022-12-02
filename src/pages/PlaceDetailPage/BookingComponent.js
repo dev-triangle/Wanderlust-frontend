@@ -13,6 +13,7 @@ const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travel
   const[travelName,setTravelName]=useState()
   const[travelImage,setTravelImage]=useState()
   const [open, setOpen] = React.useState(false);
+  const[date,setDate]=useState()
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -31,7 +32,7 @@ const BookingComponent = ({placeName,placeImage,stayId, placeid,setStayId,travel
   const finalSubmit=()=>{
     axiosInstance.post(`${baseUrl}/bookings/`,
     {
-      date_to_book: "2022-11-11",
+      date_to_book: date,
       place_name: placeName,
       place_image: placeImage,
       stay_name: stayName,
@@ -113,7 +114,6 @@ useEffect(()=>{
         <button onClick={nextFrame} className='next__button'>Next</button>
          </div>
         
-        {/* <button onClick={finalSubmit}>Book Now</button> */}
       </div>
     )
   }
@@ -121,7 +121,7 @@ useEffect(()=>{
   else if(state===2){
     return(
       <div className='booked__travels_main'>
-        
+        <input type="date" value={date} onChange={(e)=>{setDate(e.target.value)}} /><br />
         <button onClick={prevFrame} className='prev__button'>Prev</button>
       
         <button onClick={handleClickOpen} className='next__button'>Book Now</button>
