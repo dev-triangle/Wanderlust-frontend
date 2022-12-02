@@ -1,9 +1,9 @@
 import { lazy } from "react";
 
-export{ default as Login } from './Login/Login'
-export{ default as SignUp } from './signup/SignUp'
-export{ default as Dashboard } from './Dashboard/Dashboard'
-export{ default as PlaceDetailPage } from './PlaceDetailPage/PlaceDetailPage'
+export const Login = lazy(() => import("./Login/Login"));
+export const SignUp = lazy(() => import("./signup/SignUp"));
+export const Dashboard = lazy(() => import("./Dashboard/Dashboard"));
+export const PlaceDetailPage = lazy(() => import("./PlaceDetailPage/PlaceDetailPage"));
 export const LandingPage = lazy(() => import("./LandingPage/LandingPage"));
-export{ default as ReviewPage} from './ReviewPage/ReviewPage'
-export{ default as Teams} from './Teams/Teams'
+export const ReviewPage = lazy(() => import("./ReviewPage/ReviewPage"));
+export const Teams = lazy(() => import("./Teams/Teams"));
