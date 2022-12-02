@@ -3,6 +3,7 @@ import achyuth from '../assets/team/Achyuth.jpeg'
 import alen from '../assets/team/Alen.jpeg'
 import athul from '../assets/team/Athul.jpeg'
 import hari from '../assets/team/Hari.jpeg'
+import adithya from '../assets/team/adithya.jpeg'
 const persons=[
     {
         id:1,
@@ -17,7 +18,7 @@ const persons=[
     {
         id:3,
         name:'Adithya Ajith',
-        image:'https://avatars.githubusercontent.com/u/43471295?v=4'
+        image:adithya
     },
     {
         id:4,
