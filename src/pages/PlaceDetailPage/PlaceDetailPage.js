@@ -16,6 +16,7 @@ const PlaceDetailPage = () => {
   const[travelId,setTravelId]=useState(0)
   const[things,setThings]=useState([])
   const[flights,setFlights]=useState([])
+  const[hotel,setHotel]=useState([])
   useEffect(()=>{
     axios.get(`${baseUrl}/flights/`).then((response)=>{
       setFlights(response.data)
@@ -25,17 +26,27 @@ const PlaceDetailPage = () => {
   },[])
   useEffect(()=>{
     axios.get(`${baseUrl}/trains/`).then((response)=>{
+      console.log(response)
        setTrains(response.data)
     },(error)=>{
 
     })
+
+    
   },[])
+ 
   useEffect(()=>{
     axios.get(`${baseUrl}/things-to-do/`).then((res)=>{
       console.log(res)
       setThings(res.data)
     },(error)=>{
       console.log(error)
+    })
+  },[])
+
+  useEffect(()=>{
+    axios.get(`${baseUrl}/hotels/`).then((response)=>{
+        setHotel(response.data)
     })
   },[])
   const nextFrame=()=>{
@@ -109,16 +120,16 @@ const PlaceDetailPage = () => {
 
                     <div className="place__header_name">Hotels in {placeName}
                     <ul>
-                      {trains.map((train)=>{
-                        return(
-                          <li className='flight_details'>
-                            <p>Train Name: {train.train_name}</p>
-                            <p>Train Time: {train.flight_time}</p>
-                            <p>Cost: {train.cost}</p>
-                            <p>Next Date: {train.next_date}</p>
+                      {hotel.map((hotels)=>
+                        hotel.place_foreign===parseInt(id)?
+                          (<li className='flight_details'>
+                            <p>Hotel Name: {hotels.hotel_name}</p>
+                            <p>Train Time: {hotels.near_point}</p>
+                            <p>Cost: {hotels.famous_foods}</p>
+                            
                           </li>
-                        )
-                      })}
+                        ):null
+                      )}
                       </ul>
                     </div>
                     

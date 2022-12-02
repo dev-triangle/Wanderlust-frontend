@@ -10,6 +10,7 @@ import Lottie from 'react-lottie'
 import train_anim from '../../animations/88977-metro-rail.json'
 import { AiFillEdit } from 'react-icons/ai'
 import Editprofileform from '../../components/Editprofileform/Editprofileform'
+import {Modal,Button} from 'react-bootstrap'
 const Dashboard = () => {
   const navigate=useNavigate()
   const[curr_username,setCurr_username]=useState('')
@@ -19,6 +20,8 @@ const Dashboard = () => {
   const[phno,setPhno]=useState('')
   const[userimg,setUserimg]=useState()
   const[frame,setFrame]=useState('places')
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
 
   const parachuteEffect={
     loop: true,
@@ -61,14 +64,29 @@ const Dashboard = () => {
         
         <img className='profile__pic' src="https://avatars.githubusercontent.com/u/43471295?v=4" alt="your_image" />
         <div className="profile__details">
-          <div className="each_detail_profile"><div className='profile_name'>Name: </div><span className='profile_name_content'>Achyuth</span> </div>
-          <div className="each_detail_profile"><div className='profile_name'>Phone no: </div><p className='profile_name_content'> 123456789</p></div>
+          <div className="each_detail_profile"><div className='profile_name'>Name: </div><span className='profile_name_content'>{actualname}</span> </div>
+          <div className="each_detail_profile"><div className='profile_name'>Phone no: </div><p className='profile_name_content'>{phno}</p></div>
           <div className="each_detail_profile"><div className='profile_name'>Username: </div><p className='profile_name_content'>{curr_username}</p></div>
           <div className="each_detail_profile"><div className='profile_name'>Email: </div><p className='profile_name_content'>{currEmail}</p></div>
-          <AiFillEdit/>
+          <AiFillEdit  onClick={()=>{ setShow(true) }}/>
         </div>
         <Lottie options={parachuteEffect} style={{width:'20%' ,height:'30%'}}/>
         </div>
+        <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+            <Modal.Title>
+                Edit profile
+            </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <Editprofileform />
+        </Modal.Body>
+        <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Close Button
+                </Button>
+        </Modal.Footer>
+    </Modal>
         {/* profile main ends here */}
         <div className="booking__main">
           <div className="booked__header_container">
