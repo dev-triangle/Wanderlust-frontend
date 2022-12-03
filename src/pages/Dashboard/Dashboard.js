@@ -79,7 +79,7 @@ const Dashboard = () => {
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <Editprofileform />
+            <Editprofileform actualname={actualname} phno={phno} userimg={userimg}/>
         </Modal.Body>
         <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

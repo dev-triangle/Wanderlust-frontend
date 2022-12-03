@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import axiosInstance from '../../utils/axios'
+import baseUrl from '../../utils/Urls';
 
 function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUserimg}) {
 
@@ -9,7 +10,14 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
    
 
     const handleSubmit=(e)=>{
-        
+        axiosInstance.post(`${baseUrl}/user-detail/`,{
+            
+          "actual_name":actualname,
+          "phno":phno,
+          "user_image":userimg,
+          "user_foriegn":2
+        })
+
         e.preventDefault();
     
 }
@@ -41,7 +49,7 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
     </Form.Group><br/>
     
     <Form.Group>
-       <h5>Linkedin</h5>
+       <h5>Phone number</h5>
         <Form.Control
             type="text"
             placeholder="phone number"
