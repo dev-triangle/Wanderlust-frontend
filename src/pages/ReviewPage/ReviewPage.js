@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Mainlayout from '../../components/Mainlayout/Mainlayout'
 import './ReviewPage.css'
+import axios from 'axios'
+import baseUrl from '../../utils/Urls'
+import {useEffect,useState} from 'react'
 function ReviewPage() {
+
+
+useEffect(()=>{
+  axios.get(`${baseUrl}/reviews/`).then((response)=>{
+    
+  })
+})
+
   return (
     <Mainlayout>
     <section class="t-bq-section" id="paul">
