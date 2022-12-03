@@ -6,7 +6,7 @@ import {useState} from 'react'
 
 function Editprofileform() {
 
-    const[actualname,setActualname]=useState('')
+  const[actualname,setActualname]=useState('')
   const[phno,setPhno]=useState('')
   const[userimg,setUserimg]=useState()
 
@@ -19,14 +19,12 @@ function Editprofileform() {
      uploaddata.append('userimg',userimg)  
 
         axiosInstance.post(`${baseUrl}/user-detail/`,{
-            
-          "actual_name":actualname,
-          "phno":phno,
-          "user_image":uploaddata.userimg,
-          "user_foreign":localStorage.getItem('userid')
-          
+          actual_name:actualname,
+          phno:phno,
+          user_image:uploaddata.userimg,
+          user_foreign:localStorage.getItem('userid')
         }).then((response)=>{
-console.log(response)
+            console.log(response)
         })
 
         e.preventDefault();

@@ -22,7 +22,7 @@ const Dashboard = () => {
   const[frame,setFrame]=useState('places')
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-
+  const[userDetailId,setUserDetailId]=useState(0)
   const parachuteEffect={
     loop: true,
         autoplay: true,
@@ -48,6 +48,7 @@ const Dashboard = () => {
       response.data.forEach((item)=>{
         if(item.user_foreign===currUserid)
          { console.log("hi")
+         setUserDetailId(item.id)
           setActualname(item.actual_name)
           setPhno(item.phno)
       }
@@ -80,7 +81,7 @@ const Dashboard = () => {
             </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <Editprofileform actualname={actualname} phno={phno} userimg={userimg} setActualname={setActualname} setPhno={setPhno} setUserimg={setUserimg}/>
+            <Editprofileform userDetailId={userDetailId} actualname={actualname} phno={phno} userimg={userimg} setActualname={setActualname} setPhno={setPhno} setUserimg={setUserimg}/>
         </Modal.Body>
         <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
