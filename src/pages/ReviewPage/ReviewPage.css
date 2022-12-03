@@ -31,8 +31,9 @@ section.t-bq-section {
 
 .t-bq-quote-paul .t-bq-quote-paul-pattern {
     flex-basis: 80px;
-    background: url("https://raw.githubusercontent.com/taviskaron/t-div-blockquotes/main/img/hexabump.png") repeat;
+    /* background: url("https://raw.githubusercontent.com/taviskaron/t-div-blockquotes/main/img/hexabump.png") repeat; */
     border-radius: 10px 0 0 10px;
+    background: linear-gradient(180deg,rgba(9,76,131,.75),#21b8cb),#efffec;
 }
 
 .t-bq-quote-paul .t-bq-quote-paul-base {
@@ -63,7 +64,7 @@ section.t-bq-section {
     left: 45px;
     width: 70px;
     height: 70px;
-    background: url("https://raw.githubusercontent.com/taviskaron/t-div-blockquotes/main/img/strug.jpg") center center no-repeat;
+    /* background: url("https://raw.githubusercontent.com/taviskaron/t-div-blockquotes/main/img/strug.jpg") center center no-repeat; */
     background-size: cover;
     border-radius: 50%;
 }
