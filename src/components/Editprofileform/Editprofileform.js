@@ -14,8 +14,8 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
             
           "actual_name":actualname,
           "phno":phno,
-          "user_image":userimg,
-          "user_foriegn":2
+          "user_image":userimg
+         
         })
 
         e.preventDefault();
