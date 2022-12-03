@@ -2,10 +2,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axiosInstance from '../../utils/axios'
 import baseUrl from '../../utils/Urls';
+import {useState} from 'react'
 
-function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUserimg}) {
+function Editprofileform() {
 
-   
+    const[actualname,setActualname]=useState('')
+  const[phno,setPhno]=useState('')
+  const[userimg,setUserimg]=useState()
 
    
 
@@ -14,8 +17,9 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
             
           "actual_name":actualname,
           "phno":phno,
-          "user_image":userimg
-         
+          "user_image":userimg,
+          "user_foreign":localStorage.getItem('userid')
+          
         })
 
         e.preventDefault();
@@ -49,7 +53,7 @@ function Editprofileform({actualname,setActualname,phno,setPhno,userimg,setUseri
     </Form.Group><br/>
     
     <Form.Group>
-       <h5>Phone number</h5>
+       <h5>Linkedin</h5>
         <Form.Control
             type="text"
             placeholder="phone number"

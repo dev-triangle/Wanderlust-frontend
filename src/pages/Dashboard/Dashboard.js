@@ -37,6 +37,7 @@ const Dashboard = () => {
       setCurr_username(response.data.username)
       setCurrEmail(response.data.email)
       setcurrUserid(response.data.id)
+      localStorage.setItem('userid',response.data.id)
     },(error)=>{
       console.log(error)
     })
