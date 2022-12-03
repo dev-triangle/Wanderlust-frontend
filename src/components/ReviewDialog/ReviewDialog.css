@@ -1,0 +1,12 @@
+.review_form__container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+.review_main_form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

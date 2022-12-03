@@ -4,22 +4,36 @@ import './ReviewPage.css'
 import axios from 'axios'
 import baseUrl from '../../utils/Urls'
 import ReviewCards from './ReviewCards'
+import ReviewDialog from '../../components/ReviewDialog/ReviewDialog'
 function ReviewPage() {
 const[reviews,setReviews]=useState([])
+const[open,setOpen]=useState(false)
+
+const handleClose=()=>{
+  setOpen(false)
+}
+const handleClickOpen = () => {
+  setOpen(true);
+}
 
 useEffect(()=>{
   axios.get(`${baseUrl}/reviews/`).then((response)=>{
     setReviews(response.data)
   })
 },[])
-
   return (
     <Mainlayout>
+      <ReviewDialog open={open} handleClose={handleClose} />
     <div className='review__container'>
+    {
+            (localStorage.getItem('refresh_token'))?((<button className="nav_item" onClick={handleClickOpen} >
+           Review
+          </button>  )):(( null))
+          }
      {
         reviews.map((item)=>{
           return(
-              <ReviewCards key={item.id} desc={item.desc} rate={item.rate}/>
+              <ReviewCards key={item.id} desc={item.desc} rate={item.rate} name={item.user_name}/>
           )
         })
      }

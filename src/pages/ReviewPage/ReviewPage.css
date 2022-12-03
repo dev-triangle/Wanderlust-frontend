@@ -8,6 +8,10 @@ section.t-bq-section {
     padding: 30px;
     margin-bottom: 60px;
 }
+.rating__text{
+    font-size: 1rem;
+    color: cornflowerblue;
+}
 
 .t-bq-wrapper.t-bq-wrapper-boxed {
     max-width: 576px;
