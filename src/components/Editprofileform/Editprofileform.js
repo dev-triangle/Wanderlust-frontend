@@ -13,13 +13,20 @@ function Editprofileform() {
    
 
     const handleSubmit=(e)=>{
+
+     const uploaddata=new FormData()     
+    //  uploaddata.append('actual_name',actualname)
+     uploaddata.append('userimg',userimg)  
+
         axiosInstance.post(`${baseUrl}/user-detail/`,{
             
           "actual_name":actualname,
           "phno":phno,
-          "user_image":userimg,
+          "user_image":uploaddata.userimg,
           "user_foreign":localStorage.getItem('userid')
           
+        }).then((response)=>{
+console.log(response)
         })
 
         e.preventDefault();
@@ -46,14 +53,14 @@ function Editprofileform() {
             type="file"
             placeholder="pic"
             name="name"
-            value={userimg}
-           onChange = { (e) => setUserimg(e.target.value)}
+            accept='.jpg, .jpeg, .png'
+           onChange = { (e) => setUserimg(e.target.files[0])}
             
         />
     </Form.Group><br/>
     
     <Form.Group>
-       <h5>Linkedin</h5>
+       <h5>Phone number</h5>
         <Form.Control
             type="text"
             placeholder="phone number"
