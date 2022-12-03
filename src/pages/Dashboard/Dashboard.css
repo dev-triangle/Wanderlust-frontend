@@ -36,7 +36,8 @@
 }
 .profile__pic{
     border-radius: 15rem;
-    width: 10rem;
+    width: 12rem;
+    height: 12rem;
 }
 .contact_img img {
     width: 100%;
@@ -143,8 +144,23 @@ background: linear-gradient(45deg, rgba(16,115,149,0.8608485630580357) 95%, rgba
     font-weight: 500;
     margin-bottom: 1.25rem;
 }
-
-
+.profile_name{
+    display: flex;
+    color: #ffff;
+    gap: 2rem;
+    padding: 2px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: #002B5B;
+}
+.each_detail_profile{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.profile_name_content{
+    margin-top: 2rem;
+}
 
 @media screen and(min-width:200px) {
     .container {
