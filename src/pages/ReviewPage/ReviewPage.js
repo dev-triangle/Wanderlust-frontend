@@ -4,6 +4,7 @@ import './ReviewPage.css'
 import axios from 'axios'
 import baseUrl from '../../utils/Urls'
 import ReviewCards from './ReviewCards'
+import CustomTitle from '../../utils/CustomTitle'
 import ReviewDialog from '../../components/ReviewDialog/ReviewDialog'
 function ReviewPage() {
 const[reviews,setReviews]=useState([])
@@ -23,6 +24,7 @@ useEffect(()=>{
 },[])
   return (
     <Mainlayout>
+      <CustomTitle title='Reviews'/>
       <ReviewDialog open={open} handleClose={handleClose} />
     <div className='review__container'>
     {
