@@ -70,8 +70,8 @@ background: linear-gradient(to top, rgba(9,121,112,1) 35%, rgba(3,153,180,1) 75%
     width: 170px;
     cursor: pointer;
     border-radius: 10px;
-    /* margin: 2rem 0; */
-    /* transition: ease-in 0.5s; */
+    margin: 2rem; 
+    transition: ease-in 0.5s; 
     font-family: 'Inter';
 }
 .about_btn{
