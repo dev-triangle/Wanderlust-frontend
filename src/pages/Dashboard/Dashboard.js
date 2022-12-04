@@ -21,6 +21,7 @@ const Dashboard = () => {
   const[userimg,setUserimg]=useState()
   const[frame,setFrame]=useState('places')
   const [show, setShow] = useState(false);
+  const[userImage,setUserImage]=useState()
   const handleClose = () => setShow(false);
   const[userDetailId,setUserDetailId]=useState(0)
   const parachuteEffect={
@@ -48,6 +49,7 @@ const Dashboard = () => {
       response.data.forEach((item)=>{
         if(item.user_foreign===currUserid)
          { 
+          setUserImage(item.user_image)
          setUserDetailId(item.id)
           setActualname(item.actual_name)
           setPhno(item.phno)
@@ -64,7 +66,7 @@ const Dashboard = () => {
           {/* profile main starts here */}
         <div className="profile__main">
         
-        <img className='profile__pic' src="https://avatars.githubusercontent.com/u/43471295?v=4" alt="your_image" />
+        <img className='profile__pic' src={userImage} alt="your_image" />
         <div className="profile__details">
           <div className="each_detail_profile"><div className='profile_name'>Name: </div><span className='profile_name_content'>{actualname}</span> </div>
           <div className="each_detail_profile"><div className='profile_name'>Phone no: </div><p className='profile_name_content'>{phno}</p></div>

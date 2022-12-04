@@ -1,47 +1,61 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import axiosInstance from '../../utils/axios'
+import React, { Component } from 'react'
+import { Form } from 'react-bootstrap';
+import axiosInstance from '../../utils/axios';
 import baseUrl from '../../utils/Urls';
-import {useState} from 'react'
+import Button from 'react-bootstrap/Button';
 
-function Editprofileform() {
+export class Editprofileform extends Component {
+  
+  state = {
+    actual_name: '',
+    phno: '',
+    user_image: null,
+    user_foreign: localStorage.getItem('userid')
+  };
 
-  const[actualname,setActualname]=useState('')
-  const[phno,setPhno]=useState('')
-  const[userimg,setUserimg]=useState()
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  };
 
-   
+  handleImageChange = (e) => {
+    this.setState({
+      user_image: e.target.files[0]
+    })
+  };
 
-    const handleSubmit=(e)=>{
-
-     const uploaddata=new FormData()     
-    //  uploaddata.append('actual_name',actualname)
-     uploaddata.append('userimg',userimg)  
-
-        axiosInstance.post(`${baseUrl}/user-detail/`,{
-          actual_name:actualname,
-          phno:phno,
-          user_image:uploaddata.userimg,
-          user_foreign:localStorage.getItem('userid')
-        }).then((response)=>{
-            console.log(response)
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+    let form_data = new FormData();
+    form_data.append('user_image', this.state.user_image, this.state.user_image.name);
+    form_data.append('actual_name', this.state.actual_name);
+    form_data.append('phno', this.state.phno);
+    form_data.append('user_foreign', this.state.user_foreign);
+    let url = `${baseUrl}/user-detail/`;
+    axiosInstance.post(url, form_data, {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    })
+        .then(res => {
+          console.log(res.data);
         })
-
-        e.preventDefault();
-    
-}
-
-    
-  return (
-    <Form onSubmit={handleSubmit}>
+        .catch(err => console.log(err))
+  };
+  render() {
+    return (
+      <Form onSubmit={this.handleSubmit}>
     <Form.Group>
        <h5>Name</h5>
         <Form.Control
             type="text"
             placeholder="Name *"
-            name="name"
-            value={actualname}
-           onChange = { (e) => setActualname(e.target.value)}
+            name="actual_name"
+            id="actual_name"
+            value={this.state.actual_name}
+            onChange = { this.handleChange }
             
         />
     </Form.Group><br/>
@@ -50,9 +64,10 @@ function Editprofileform() {
         <Form.Control
             type="file"
             placeholder="pic"
-            name="name"
+            name="image"
+            id="user_image"
             accept='.jpg, .jpeg, .png'
-           onChange = { (e) => setUserimg(e.target.files[0])}
+            onChange = { this.handleImageChange }
             
         />
     </Form.Group><br/>
@@ -62,20 +77,21 @@ function Editprofileform() {
         <Form.Control
             type="text"
             placeholder="phone number"
-            name="name"
-            value={phno}
-           onChange = { (e) => setPhno(e.target.value)}
+            name="phno"
+            value={this.state.phno}
+            id="phno"
+            onChange = { this.handleChange }
         
         />
     </Form.Group><br/>
     
 
-    <Button onClick={handleSubmit} variant="success" type="submit" block>
+    <Button onClick={this.handleSubmit} variant="success" type="submit" block>
         Save Changes
     </Button>
 </Form>
-
-  );
+    )
+  }
 }
 
-export default Editprofileform;
+export default Editprofileform
