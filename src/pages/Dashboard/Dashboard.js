@@ -47,7 +47,7 @@ const Dashboard = () => {
       console.log(response)
       response.data.forEach((item)=>{
         if(item.user_foreign===currUserid)
-         { console.log("hi")
+         { 
          setUserDetailId(item.id)
           setActualname(item.actual_name)
           setPhno(item.phno)

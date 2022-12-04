@@ -31,6 +31,8 @@ const Login = () => {
             if(res.status===200)
             
             navigate('/')
+        },(error)=>{
+            
         })
 
     }

@@ -16,7 +16,7 @@ const PlaceDetailPage = () => {
   const[travelId,setTravelId]=useState(0)
   const[things,setThings]=useState([])
   const[flights,setFlights]=useState([])
-  const[hotel,setHotel]=useState([])
+  const[hotels,setHotels]=useState([])
   useEffect(()=>{
     axios.get(`${baseUrl}/flights/`).then((response)=>{
       setFlights(response.data)
@@ -46,7 +46,7 @@ const PlaceDetailPage = () => {
 
   useEffect(()=>{
     axios.get(`${baseUrl}/hotels/`).then((response)=>{
-        setHotel(response.data)
+        setHotels(response.data)
     })
   },[])
   const nextFrame=()=>{
@@ -120,12 +120,13 @@ const PlaceDetailPage = () => {
 
                     <div className="place__header_name">Hotels in {placeName}
                     <ul>
-                      {hotel.map((hotels)=>
+                      {hotels.map((hotel)=>
                         hotel.place_foreign===parseInt(id)?
                           (<li className='flight_details'>
-                            <p>Hotel Name: {hotels.hotel_name}</p>
-                            <p>Train Time: {hotels.near_point}</p>
-                            <p>Cost: {hotels.famous_foods}</p>
+                            <img src={hotel.hotel_image} alt="" style={{width:'5rem',height:'5rem'}}/>
+                            <p>Hotel Name: {hotel.hotel_name}</p>
+                            <p>Near Point: {hotel.near_point}</p>
+                            <p>Famous Foods: {hotel.famous_foods}</p>
                             
                           </li>
                         ):null
