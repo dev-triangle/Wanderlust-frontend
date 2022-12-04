@@ -28,7 +28,7 @@ useEffect(()=>{
       <ReviewDialog open={open} handleClose={handleClose} />
     <div className='review__container'>
     {
-            (localStorage.getItem('refresh_token'))?((<button className="nav_item" onClick={handleClickOpen} >
+            (localStorage.getItem('refresh_token'))?((<button className="review__popper" onClick={handleClickOpen} >
            Review
           </button>  )):(( null))
           }

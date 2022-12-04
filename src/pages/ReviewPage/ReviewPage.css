@@ -12,7 +12,17 @@ section.t-bq-section {
     font-size: 1rem;
     color: cornflowerblue;
 }
+.review__popper{
+    background: #094c83;
+    background: linear-gradient(0deg,#094c83,#21b8cb);
+    margin-left: 10rem;
+    border-radius: 20px;
+    color:#ffff ;
+    border-color: null;
+    display: flex;
+    padding: 1rem 2rem 1rem 2rem;
 
+}
 .t-bq-wrapper.t-bq-wrapper-boxed {
     max-width: 576px;
     margin: 0 auto;
