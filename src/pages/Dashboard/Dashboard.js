@@ -8,7 +8,7 @@ import baseUrl from '../../utils/Urls'
 import { useNavigate } from 'react-router-dom'
 import Lottie from 'react-lottie'
 import train_anim from '../../animations/88977-metro-rail.json'
-import { AiFillEdit } from 'react-icons/ai'
+import { FaEdit } from 'react-icons/fa'
 import Editprofileform from '../../components/Editprofileform/Editprofileform'
 import {Modal,Button} from 'react-bootstrap'
 const Dashboard = () => {
@@ -72,7 +72,7 @@ const Dashboard = () => {
           <div className="each_detail_profile"><div className='profile_name'>Phone no: </div><p className='profile_name_content'>{phno}</p></div>
           <div className="each_detail_profile"><div className='profile_name'>Username: </div><p className='profile_name_content'>{curr_username}</p></div>
           <div className="each_detail_profile"><div className='profile_name'>Email: </div><p className='profile_name_content'>{currEmail}</p></div>
-          <AiFillEdit  onClick={()=>{ setShow(true) }}/>
+          <FaEdit size={30} onClick={()=>{ setShow(true) }}/>
         </div>
         <Lottie options={parachuteEffect} style={{width:'20%' ,height:'30%'}}/>
         </div>
