@@ -122,6 +122,15 @@
     background-color: white;
     color: #2B4865 ;
 }
+
+.hotel__div__container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: row;
+}
+
 @media only screen and (max-width: 1300px) {
 
 }

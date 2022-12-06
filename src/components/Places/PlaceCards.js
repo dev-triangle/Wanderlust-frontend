@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react'
 import './PlaceCards.css'
 import Aos from 'aos';
 import { useNavigate } from 'react-router-dom'
-function PlaceCards({ key,id,placename, country,placeimage }) {
+function PlaceCards({ id,placename, country,placeimage }) {
   const navigate=useNavigate();
   const navigateTo=()=>{
     navigate(`places/${id}`)

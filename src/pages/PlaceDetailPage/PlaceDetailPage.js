@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import BookingComponent from './BookingComponent'
 import axios from 'axios'
 import baseUrl from '../../utils/Urls'
+import HotelCards from '../../components/HotelCards/HotelCards'
 const PlaceDetailPage = () => {
   const[placeName,setPlaceName]=useState('')
   const[placeImage,setPlaceImage]=useState()
@@ -119,19 +120,15 @@ const PlaceDetailPage = () => {
                     </div>
 
                     <div className="place__header_name">Hotels in {placeName}
-                    <ul>
+                    <div className='hotel__div__container'>
                       {hotels.map((hotel)=>
                         hotel.place_foreign===parseInt(id)?
-                          (<li className='flight_details'>
-                            <img src={hotel.hotel_image} alt="" style={{width:'5rem',height:'5rem'}}/>
-                            <p>Hotel Name: {hotel.hotel_name}</p>
-                            <p>Near Point: {hotel.near_point}</p>
-                            <p>Famous Foods: {hotel.famous_foods}</p>
-                            
-                          </li>
+                          (
+                           
+                         <HotelCards key={hotel.id} hotel={hotel}/>
                         ):null
                       )}
-                      </ul>
+                      </div>
                     </div>
                     
                     </div>
