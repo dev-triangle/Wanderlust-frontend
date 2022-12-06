@@ -16,7 +16,7 @@ const TeamCard = ({id, name, image}) => {
 //     }
   return (
     <div class="card 1">
-    <div class="card_image"> <img src={image} /> </div>
+    <div class="card_image"> <img src={image} alt="team_member"/> </div>
     <div class="card_title title-white">
       <p>{name}</p>
     </div>
