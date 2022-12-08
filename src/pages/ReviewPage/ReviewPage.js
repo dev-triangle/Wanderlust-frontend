@@ -6,6 +6,7 @@ import baseUrl from '../../utils/Urls'
 import ReviewCards from './ReviewCards'
 import CustomTitle from '../../utils/CustomTitle'
 import ReviewDialog from '../../components/ReviewDialog/ReviewDialog'
+import {BsPlusCircle} from 'react-icons/bs'
 function ReviewPage() {
 const[reviews,setReviews]=useState([])
 const[open,setOpen]=useState(false)
@@ -28,9 +29,9 @@ useEffect(()=>{
       <ReviewDialog open={open} handleClose={handleClose} />
     <div className='review__container'>
     {
-            (localStorage.getItem('refresh_token'))?((<button className="review__popper" onClick={handleClickOpen} >
-           Review
-          </button>  )):(( null))
+            (localStorage.getItem('refresh_token'))?(( <BsPlusCircle  onClick={handleClickOpen} />
+           
+           )):(( null))
           }
      {
         reviews.map((item)=>{

@@ -18,7 +18,7 @@ const ReviewDialog = ({open,handleClose}) => {
 
         })
     },[])
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
         axiosInstance.post(`${baseUrl}/reviews/`,{
             desc: description,
             rate: rate,
@@ -27,8 +27,9 @@ const ReviewDialog = ({open,handleClose}) => {
         }).then((response)=>{
             console.log(response)
         },(error)=>{
-
+   console.log(error)
         })
+       
     }
   return (
     <div>
