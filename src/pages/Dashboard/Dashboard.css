@@ -178,16 +178,6 @@ background: linear-gradient(45deg, rgba(16,115,149,0.8608485630580357) 95%, rgba
 @media only screen and (max-width: 1300px) {
 
 }
-@media (min-device-width: 20px) and (max-device-width: 500px){
-   .profile__main{
-    flex-direction: column;
-    gap: 2rem;
-   }
-}
-@media only screen and (max-width: 1200px) {
-
-}
-
 @media only screen and (max-width: 1100px) {
 
 }
