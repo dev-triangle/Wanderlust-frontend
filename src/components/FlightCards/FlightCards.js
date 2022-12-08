@@ -5,16 +5,16 @@ function FlightCards({flight}) {
   
     <div class="service-card">
     
-    <h1 className='trainh'>{train.train_name}</h1>
+    <h1 className='trainh'>{flight.train_name}</h1>
     <div className='trainp_div'>
     <p className='trainp'>
-      Date: {train.next_date} 
+      Date: {flight.next_date} 
       </p>
       <p className='trainp'>
-      Time: {train.train_time}
+      Time: {flight.flight_time}
       </p>
       <p className='trainp'>
-      Cost: {train.cost}
+      Cost: {flight.cost}
     </p>
     </div>
   </div>

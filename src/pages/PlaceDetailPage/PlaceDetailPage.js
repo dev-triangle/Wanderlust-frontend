@@ -8,6 +8,7 @@ import axios from 'axios'
 import baseUrl from '../../utils/Urls'
 import HotelCards from '../../components/HotelCards/HotelCards'
 import TrainCards from '../../components/FlightCards/TrainCards'
+import FlightCards from '../../components/FlightCards/FlightCards'
 const PlaceDetailPage = () => {
   const[placeName,setPlaceName]=useState('')
   const[placeImage,setPlaceImage]=useState()
@@ -92,18 +93,14 @@ const PlaceDetailPage = () => {
                     
                     </div>
                     <div className="place__header_name">Flights to {placeName}
-                    <ul>
+                    <div className='train__container'>
                     {flights.map((flight)=>
           flight.to_place_foreign===parseInt(id)?
-            (<li className='flight_details'>
-            <p>Flight Name: {flight.flight_name}</p>
-            <p>Flight Time: {flight.flight_time}</p>
-            <p>Cost: {flight.cost}</p>
-            <p>Next Date: {flight.next_date}</p>
-          </li>):null
+            (<FlightCards key={flight.id} flight={flight}/>):null
           )
          }
-                      </ul>
+         </div>
+                      
                     </div>
                     <div className="place__header_name">Trains to {placeName}
                     <div className='train__container'>
