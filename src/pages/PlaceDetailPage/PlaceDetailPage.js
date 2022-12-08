@@ -7,6 +7,7 @@ import BookingComponent from './BookingComponent'
 import axios from 'axios'
 import baseUrl from '../../utils/Urls'
 import HotelCards from '../../components/HotelCards/HotelCards'
+import TrainCards from '../../components/FlightCards/TrainCards'
 const PlaceDetailPage = () => {
   const[placeName,setPlaceName]=useState('')
   const[placeImage,setPlaceImage]=useState()
@@ -105,18 +106,16 @@ const PlaceDetailPage = () => {
                       </ul>
                     </div>
                     <div className="place__header_name">Trains to {placeName}
-                    <ul>
+                    <div className='train__container'>
                     {trains.map((train)=>
           train.to_place_foreign===parseInt(id)?
-            (<li className='flight_details'>
-            <p>Train Name: {train.train_name}</p>
-            <p>Train Time: {train.train_time}</p>
-            <p>Cost: {train.cost}</p>
-            <p>Next Date: {train.next_date}</p>
-          </li>):null
+            (
+              <TrainCards key={train.id} train={train}/>
+            ):null
           )
          }
-                      </ul>
+         </div>
+                     
                     </div>
 
                     <div className="place__header_name">Hotels in {placeName}

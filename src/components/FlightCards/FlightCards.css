@@ -1,0 +1,60 @@
+ .service-card {
+    width: 15rem;
+    height: 20rem;
+    /* padding: 2em 1.5em; */
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+  }
+  
+  .service-card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0dcaf0, rgb(255, 23, 131));
+    position: absolute;
+    left: 0%;
+    top: -98%;
+    z-index: -2;
+    transition: all 0.4s cubic-bezier(0.77, -0.04, 0, 0.99);
+  }
+  
+   .service-card:hover:after {
+    top: 0%;
+  }
+  .service-card  {
+    background-color: #ffffff;
+    color: black
+  }
+
+   .service-card:hover  {
+    color: #0dcaf0;
+  }
+
+ .service-card:hover h3 {
+    color: #ffffff;
+  }
+  
+ .service-card:hover p {
+    color: #f0f0f0;
+  }
+  .trainp{
+    font-size: 26px;
+    
+  }
+  .trainh{
+    font-size: 2rem;
+    font-family: serif;
+  }
+  .trainp_div{
+   margin-top: 3rem;
+  }
