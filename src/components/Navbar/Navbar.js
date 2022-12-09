@@ -116,15 +116,7 @@ function Navbar() {
               >
                 Reviews
               </Link>
-              {/* <Link
-                to="/"
-                className="nav_item_mob"
-                spy={true}
-                smooth={true}
-                onClick={handleDrawerClose}
-              >
-                Logout
-              </Link> */}
+              
               {
             (localStorage.getItem('refresh_token'))?((<Link
               to="/"
