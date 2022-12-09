@@ -10,3 +10,7 @@
 .button_continer_dialog{
     /* gap: 2rem; */
 }
+.confirm__book_que{
+    font-size: 2rem;
+    color:rgba(9,76,131,.75) ;
+}
