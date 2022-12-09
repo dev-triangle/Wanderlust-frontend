@@ -2,7 +2,7 @@
 
 .navbar_1 {
     height: 90px;
-    /* background-color: #ffffff; */
+     background-color: #ffffff; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
     z-index: 999;
     width: 100%;
     position: fixed;
-    background: linear-gradient(180deg,rgba(9,76,131,.75),#21b8cb),#efffec;
+    /* background: linear-gradient(180deg,rgba(9,76,131,.75),#21b8cb),#efffec; */
 
 }
 

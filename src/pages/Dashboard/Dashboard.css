@@ -146,12 +146,12 @@ background: linear-gradient(45deg, rgba(16,115,149,0.8608485630580357) 95%, rgba
 }
 .profile_name{
     display: flex;
-    color: #ffff;
+    color: darkblue;
     gap: 2rem;
     padding: 2px;
     margin-top: 2rem;
     border-radius: 10px;
-    background-color: #002B5B;
+    /* background-color: #002B5B; */
 }
 .each_detail_profile{
     display: flex;
