@@ -5,8 +5,9 @@ function FlightCards({flight}) {
   
     <div class="service-card">
     
-    <h1 className='trainh'>{flight.train_name}</h1>
+    <h1 className='trainh'>{flight.flight_name}</h1>
     <div className='trainp_div'>
+      {/* <p>Name:}</p> */}
     <p className='trainp'>
       Date: {flight.next_date} 
       </p>
