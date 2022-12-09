@@ -116,7 +116,7 @@ function Navbar() {
               >
                 Reviews
               </Link>
-              <Link
+              {/* <Link
                 to="/"
                 className="nav_item_mob"
                 spy={true}
@@ -124,7 +124,27 @@ function Navbar() {
                 onClick={handleDrawerClose}
               >
                 Logout
-              </Link>
+              </Link> */}
+              {
+            (localStorage.getItem('refresh_token'))?((<Link
+              to="/"
+              className="nav_item_mob"
+              spy={true}
+              smooth={true}
+              onClick={()=>{Logout();} }
+              
+            >
+              Logout
+            </Link>  )):(( <Link
+                to="/login"
+                className="nav_item_mob"
+                spy={true}
+                smooth={true}
+                onClick={handleDrawerClose}
+              >
+                Login
+              </Link>))
+          }
               <Link
                 to="/team"
                 className="nav_item_mob"
