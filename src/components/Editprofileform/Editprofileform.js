@@ -26,7 +26,7 @@ export class Editprofileform extends Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(this.state);
     let form_data = new FormData();
     form_data.append('user_image', this.state.user_image, this.state.user_image.name);
