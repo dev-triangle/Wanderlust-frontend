@@ -213,7 +213,8 @@
     font-weight: 700;
     padding-top: 10px;
     font-family: 'Oleo Script Swash Caps';
-    font-size: 25px;
+    font-family: 'Buenos Aires' !important;
+    font-size: 32px;
     color: #002B5B;
     cursor: pointer;
     }
