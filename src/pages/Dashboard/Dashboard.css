@@ -161,7 +161,11 @@ background: linear-gradient(45deg, rgba(16,115,149,0.8608485630580357) 95%, rgba
 .profile_name_content{
     margin-top: 2rem;
 }
-
+.profile__details{
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+    padding: 2rem;
+    border-radius: 1rem;
+}
 @media screen and(min-width:200px) {
     .container {
         height: 350px;
