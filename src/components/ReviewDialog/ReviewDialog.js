@@ -45,9 +45,9 @@ const ReviewDialog = ({open,handleClose}) => {
         aria-describedby="alert-dialog-description">
             <div className="review_form__container">
             <form className='review_main_form' onSubmit={handleSubmit}>
-                <input type='text' placeholder='Description'value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
-                <input type="number" placeholder='Enter your rating out of 10' value={rate} onChange={(e)=>{setRate(e.target.value)}}/>
-                <button type='submit'>Submit</button>
+                <input className='review__input review__desc' type='text' placeholder='Description'value={description} onChange={(e)=>{setDescription(e.target.value)}}/>
+                <input className='review__input' type="number" placeholder='Enter your rating out of 10' value={rate} onChange={(e)=>{setRate(e.target.value)}}/>
+                <button className='review__btn' type='submit'>Submit</button>
             </form>
             </div>
             

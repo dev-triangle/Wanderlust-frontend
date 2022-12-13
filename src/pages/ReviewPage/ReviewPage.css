@@ -21,6 +21,7 @@ section.t-bq-section {
     border-color: null;
     display: flex;
     padding: 1rem 2rem 1rem 2rem;
+    border: none;
 
 }
 .t-bq-wrapper.t-bq-wrapper-boxed {
@@ -108,6 +109,10 @@ section.t-bq-section {
 
 .t-bq-quote-paul .t-bq-quote-paul-meta .t-bq-quote-paul-source {
     font-size: 9pt;
+}
+
+.css-1p45l4-MuiPaper-root-MuiDialog-paper{
+    background: linear-gradient(180deg,rgba(9,76,131,.75),#21b8cb),#efffec;
 }
 
 @media screen and (max-width: 768px) {

@@ -10,3 +10,27 @@
     flex-direction: column;
     gap: 2rem;
 }
+.review__input{
+    outline: none;
+    width: 20rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.9rem 1.2rem
+    
+}
+.review__desc{
+    height: 6rem;
+}
+.review__desc::placeholder{
+    float: inline-start;
+    position: absolute;
+}
+
+.review__btn{
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: crimson
+}
